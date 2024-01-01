@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Pour assurer une hauteur minimale de la fenêtre visible */
+}
+
+header {
+    background-image: url('./images/sofrout/Capture\ d’écran\ 2024-01-01\ à\ 15.20.50.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-size: x-large;
+}
+
+h1 {
+    color: white;
+}
+
+/* header :after {
+    position: absolute;
+    content: 'בס״ד';
+    color: #fff;
+    display: inline-block;
+    right: 10px;
+    top: 0;
+    font-size: 23px;
+} */
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    flex-grow: 1;
+    /* Pour que le contenu occupe l'espace restant entre le header et le footer */
+    padding: 20px;
+    margin-top: 180px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    /* Réduire l'espace intérieur du footer */
+    font-size: 14px;
+    /* Redimensionner la taille du texte */
+}
