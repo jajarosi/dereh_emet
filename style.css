@@ -16,8 +16,9 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 15px;
-    padding-top: 10px;
+    background-attachment: fixed;
+    /* margin-bottom: 15px;
+    padding-top: 10px; */
     text-align: center;
     font-family: 'Dancing Script', cursive;
     position: fixed;
@@ -31,15 +32,15 @@ h1 {
     color: white;
 }
 
-/* header :after {
+#bsd {
     position: absolute;
-    content: 'בס״ד';
+    /* content: 'בס״ד'; */
     color: #fff;
     display: inline-block;
     right: 10px;
     top: 0;
     font-size: 23px;
-} */
+}
 
 nav {
     background-color: #333;
@@ -76,4 +77,64 @@ footer {
     /* Réduire l'espace intérieur du footer */
     font-size: 14px;
     /* Redimensionner la taille du texte */
+}
+
+#title {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    text-align: center;
+}
+
+#title>h1 {
+    padding: 10px;
+}
+
+.no-margin-bottom {
+    margin-bottom: 3px !important;
+}
+
+/* #article {
+    background-image: url("./images/article/article1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    width: 20%;
+    left: 0;
+} */
+
+#home {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* Deux colonnes, la première occupe toute la largeur disponible, la deuxième ajuste à son contenu */
+}
+
+#article {
+    background-image: url('./images/article/article1.jpg');
+    background-size: cover;
+    height: 200vh;
+    width: 100%;
+}
+
+#text-home {
+    padding: 20px;
+}
+
+.marquee-container {
+    overflow: hidden;
+    /* Masque le débordement pour éviter des problèmes de mise en page */
+    white-space: nowrap;
+    /* Empêche le texte de passer à la ligne */
+    width: 100%;
+    /* Ajuste la largeur selon tes besoins */
+}
+
+/* Ajoute du style aux images à l'intérieur de la marquee */
+.marquee img {
+    width: 240px;
+    height: 240px;
+    margin-right: 20px;
+    /* Espace entre les images, ajuste selon tes besoins */
 }

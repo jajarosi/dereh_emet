@@ -11,8 +11,10 @@ $(document).ready(function () {
     // Gestionnaire d'événements pour les liens internes
     $("a").on("click", function () {
         const dataSection = $(this).attr("data-section")
-        console.log(dataSection)
+        // console.log(dataSection)
         $("section").hide()
         $("#" + dataSection).show()
     });
 });
+
+
