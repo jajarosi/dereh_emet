@@ -14,7 +14,10 @@ $(document).ready(function () {
         // console.log(dataSection)
         $("section").hide()
         $("#" + dataSection).show()
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    $('.navbar-toggler').on('click', function () {
+        $('.navbar-collapse').collapse('toggle');
     });
 });
-
-
