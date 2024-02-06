@@ -94,17 +94,6 @@ footer {
     margin-bottom: 3px !important;
 }
 
-/* #article {
-    background-image: url("./images/article/article1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: fixed;
-    width: 20%;
-    left: 0;
-} */
-
 #home {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -142,4 +131,39 @@ footer {
     height: 240px;
     margin-right: 20px;
     /* Espace entre les images, ajuste selon tes besoins */
+}
+
+.containerChaatnez {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    height: 10000px;
+}
+
+.video-list-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#videoList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-list {
+    width: 70%;
+    height: 40vw;
+}
+
+.list-title {
+    font-size: smaller;
+    width: 70%;
 }
