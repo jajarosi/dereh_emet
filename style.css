@@ -69,6 +69,20 @@ main {
     margin-top: 180px;
 }
 
+.titleSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px;
+    gap: 10px;
+}
+
+.content div {
+    margin: 25px;
+    padding: 10px;
+}
+
 footer {
     background-color: #333;
     color: #fff;
@@ -166,4 +180,37 @@ footer {
 .list-title {
     font-size: smaller;
     width: 70%;
+}
+
+.livreSection {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    height: 70% !important;
+}
+
+.livreTitre {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.livresPicture {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-gap: 10px;
+}
+
+.livreContainer {
+    flex-basis: 50%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.imageLivre {
+    width: 100%;
+    height: auto;
 }
