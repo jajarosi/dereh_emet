@@ -9,7 +9,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background: rgb(77, 107, 117);
-    background: linear-gradient(201deg, rgba(77, 107, 117, 0.4052214635854342) 0%, rgba(157, 109, 48, 0.4052214635854342) 86%);
+    background: linear-gradient(315deg, rgba(77, 107, 117, 0.26516544117647056) 26%, rgba(157, 109, 48, 0.2315519957983193) 87%);
+
     /* Pour assurer une hauteur minimale de la fenêtre visible */
 }
 
