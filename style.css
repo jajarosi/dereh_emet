@@ -8,10 +8,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: rgb(77, 107, 117);
+    background: linear-gradient(201deg, rgba(77, 107, 117, 0.4052214635854342) 0%, rgba(157, 109, 48, 0.4052214635854342) 86%);
     /* Pour assurer une hauteur minimale de la fenêtre visible */
 }
 
-header {
+img {
+    border-radius: 4px;
+}
+
+.header {
     background-image: url('./images/sofrout/fond-header.png');
     background-size: cover;
     background-position: center;
@@ -21,15 +27,31 @@ header {
     padding-top: 10px; */
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     top: 0;
     z-index: 1000;
     font-size: x-large;
+    height: 25vw;
+    /* height: 250px; */
+    /* height: 50%; */
+
 }
 
 h1 {
     color: white;
+}
+
+.titreHaut {
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.titreHaut p {
+    color: white;
+    font-size: 270%;
+    font-weight: 520;
 }
 
 #bsd {
@@ -40,6 +62,12 @@ h1 {
     right: 10px;
     top: 0;
     font-size: 23px;
+}
+
+#menu {
+    position: fixed;
+    top: 83%;
+    width: 100%;
 }
 
 nav {
@@ -60,13 +88,17 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #fff;
+    font-size: larger;
 }
+
 
 main {
     flex-grow: 1;
     /* Pour que le contenu occupe l'espace restant entre le header et le footer */
+    margin-top: 20px;
     padding: 20px;
-    margin-top: 180px;
+    /* margin-top: 250px; */
+    font-size: x-large;
 }
 
 .titleSection {
@@ -98,6 +130,8 @@ footer {
     height: 100%;
     backdrop-filter: blur(2px);
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 #title>h1 {
@@ -110,15 +144,42 @@ footer {
 
 #home {
     display: grid;
+    /* width: auto; */
     grid-template-columns: 1fr 3fr;
     /* Deux colonnes, la première occupe toute la largeur disponible, la deuxième ajuste à son contenu */
 }
 
+.image-scroll-container {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+.image-scroll-container img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1200px);
+    }
+
+}
+
+.image-scroll-container img {
+    animation: scroll 20s linear infinite;
+}
+
+
 #article {
-    /* background-image: url('./images/article/article1.jpg');
-    background-size: cover; */
     height: 200vh;
-    width: 100%;
+    width: 25vw;
 }
 
 #imgLeftSide {
@@ -128,23 +189,7 @@ footer {
 
 #text-home {
     padding: 20px;
-}
-
-.marquee-container {
-    overflow: hidden;
-    /* Masque le débordement pour éviter des problèmes de mise en page */
-    white-space: nowrap;
-    /* Empêche le texte de passer à la ligne */
-    width: 100%;
-    /* Ajuste la largeur selon tes besoins */
-}
-
-/* Ajoute du style aux images à l'intérieur de la marquee */
-.marquee img {
-    width: 240px;
-    height: 240px;
-    margin-right: 20px;
-    /* Espace entre les images, ajuste selon tes besoins */
+    width: 74vw;
 }
 
 .containerChaatnez {
@@ -170,11 +215,15 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .video-list {
     width: 70%;
     height: 40vw;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .list-title {
