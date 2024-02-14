@@ -55,6 +55,13 @@ h1 {
     font-weight: 520;
 }
 
+@media screen and (max-width: 465px) {
+    .titreHaut p {
+        font-size: 100%;
+        /* Vous pouvez ajuster cette taille selon vos besoins */
+    }
+}
+
 #bsd {
     position: absolute;
     /* content: 'בס״ד'; */
