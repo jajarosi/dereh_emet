@@ -271,3 +271,10 @@ footer {
     width: 100%;
     height: auto;
 }
+
+.titleCours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
