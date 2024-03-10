@@ -75,6 +75,7 @@ h1 {
 #menu {
     position: fixed;
     top: 83%;
+    /* top: 22vw; */
     width: 100%;
 }
 
