@@ -279,3 +279,140 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+#projet,
+#kollel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.titleSection {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.titleSection h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.left-side,
+.right-side,
+.contenue {
+    grid-column: span 1;
+}
+
+.contenue {
+    grid-column: 2 / 3;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.downloadBtn {
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    #projet {
+        grid-template-columns: 1fr;
+        /* Une seule colonne pour les appareils mobiles */
+    }
+
+    .left-side,
+    .right-side {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contenue {
+        grid-column: 1 / -1;
+        /* Prend toute la largeur sur mobile */
+    }
+}
+
+.contentSofrout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.contenueSofrout {
+    grid-column: 1;
+}
+
+@media (max-width: 768px) {
+    .contentSofrout {
+        display: block;
+    }
+
+    .contenueSofrout {
+        grid-column: auto;
+    }
+
+    .slider-images img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* -------------------------------------- */
+
+.slider-container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-images {
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    animation: slide-animation 30s infinite alternate;
+}
+
+@keyframes slide-animation {
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    80% {
+        left: -400%;
+    }
+
+    100% {
+        left: -500%;
+    }
+
+}
+
+.slider-images img {
+    width: 20%;
+    height: 100%;
+    float: left;
+}

@@ -99,3 +99,16 @@ document.addEventListener('DOMContentLoaded', function () {
         )
     }).join('')
 });
+
+function togglePdf(elementId) {
+    const iframe = document.getElementById(`pdfViewer${elementId}`);
+    const button = document.querySelector(`#${elementId} .switchBtn`);
+
+    if (iframe.style.display === 'none') {
+        iframe.style.display = 'block';
+        button.textContent = 'Fermer le PDF';
+    } else {
+        iframe.style.display = 'none';
+        button.textContent = 'Afficher le PDF';
+    }
+}
