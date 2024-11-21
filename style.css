@@ -422,3 +422,168 @@ footer {
     height: 100%;
     float: left;
 }
+
+@supports (-webkit-appearance: none) {
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f4f4f4;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: rgb(77, 107, 117);
+        background: -webkit-linear-gradient(315deg, rgba(77, 107, 117, 0.26) 26%, rgba(157, 109, 48, 0.23) 87%);
+        background: linear-gradient(315deg, rgba(77, 107, 117, 0.26) 26%, rgba(157, 109, 48, 0.23) 87%);
+    }
+
+    img {
+        border-radius: 4px;
+    }
+
+    .header {
+        background-image: url('./images/sofrout/fond-header.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        font-size: x-large;
+        height: 25vw;
+        /* Fix for Safari to support fixed backgrounds */
+        -webkit-background-clip: text;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    #bsd {
+        position: absolute;
+        color: #fff;
+        right: 10px;
+        top: 0;
+        font-size: 23px;
+    }
+
+    #menu {
+        position: fixed;
+        top: 83%;
+        width: 100%;
+        z-index: 9999;
+        /* Ensure it stays above content */
+    }
+
+    nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: larger;
+    }
+
+    main {
+        flex-grow: 1;
+        margin-top: 20px;
+        padding: 20px;
+        font-size: x-large;
+    }
+
+    /* Adaptation pour slider et animation */
+    .slider-container {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        /* Meilleur support sur Safari mobile */
+    }
+
+    .slider-images {
+        width: 500%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: slide-animation 30s infinite alternate;
+        -webkit-animation: slide-animation 30s infinite alternate;
+        /* Safari */
+    }
+
+    @keyframes slide-animation {
+        0% {
+            left: 0;
+        }
+
+        20% {
+            left: -100%;
+        }
+
+        40% {
+            left: -200%;
+        }
+
+        60% {
+            left: -300%;
+        }
+
+        80% {
+            left: -400%;
+        }
+
+        100% {
+            left: -500%;
+        }
+    }
+
+    .slider-images img {
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+
+    /* Correctifs pour Safari */
+    #title {
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        /* Fix for Safari */
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        .contentSofrout {
+            display: block;
+        }
+
+        .contenueSofrout {
+            grid-column: auto;
+        }
+
+        .slider-images img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}
