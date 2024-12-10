@@ -587,3 +587,61 @@ footer {
     }
 
 }
+
+/* Container des boutons */
+.choiceAlertes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Style général des boutons */
+.choiceAlertes button {
+    padding: 12px 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choiceAlertes button a {
+    color: #333;
+    /* Gris foncé pour les liens */
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+/* Bouton "Alertes" */
+#btnLogin {
+    background-color: #d1c7b7;
+    /* Beige clair */
+    color: #333;
+    /* Gris foncé pour le texte */
+    border: 1px solid #ccc;
+}
+
+#btnLogin:hover {
+    background-color: #b7a38f;
+    /* Beige plus foncé au survol */
+}
+
+/* Bouton "Demander un accès" */
+#btnRequestAccess {
+    background-color: #4d6b75;
+    /* Gris-bleu doux */
+    color: white;
+    /* Texte blanc */
+    border: 1px solid #ccc;
+}
+
+#btnRequestAccess:hover {
+    background-color: #3e5755;
+    /* Gris-bleu plus foncé au survol */
+}

@@ -28,6 +28,28 @@ $(document).ready(function () {
     }, function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
     });
+
+    $("#loginForm").on("submit", function (event) {
+        event.preventDefault(); // Empêche l'envoi du formulaire
+
+        var username = $("#username").val();
+        var password = $("#password").val();
+
+        const users = [
+            { username: "admin", password: "1234" },
+            { username: "user1", password: "password1" }
+        ];
+
+        const user = users.find(user => user.username === username && user.password === password);
+
+        if (user) {
+            // Connexion réussie, affiche la section alertes
+            $("#connectionAlertes").hide();
+            $("#contenusAlertes").show();
+        } else {
+            alert("Identifiant ou mot de passe incorrect.");
+        }
+    });
 });
 
 
@@ -112,3 +134,8 @@ function togglePdf(elementId) {
         button.textContent = 'Afficher le PDF';
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('alertesList').innerHTML =
+        `Hello`
+});

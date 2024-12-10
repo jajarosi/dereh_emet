@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>Dereh Emet</title>
@@ -386,11 +386,37 @@
         <section id="alertesChaatnez" class="content">
             <div class="titleSection">
                 <h2>LES ALERTES DU CHAATNEZ</h2>
+                <h5>RESERVE AUX ABONNES</h5>
             </div>
-            <h5>RESERVE AUX ABONNES</h5>
-            <div>
-                <p>* pour tout renseignements: <a href="javascript:void(0)" data-section="contact"> nous contacter</a>
-                </p>
+            <div class="choiceAlertes">
+                <button id="btnLogin">
+                    <a href="javascript:void(0)" data-section="connectionAlertes">Alertes</a>
+                </button>
+                <button id="btnRequestAccess" class="btn btn-secondary">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSekU6CkW_AOQ-1pFofAtmYORcZiZYtNbIKXJqnwAzA-ApCa0A/viewform?usp=header"
+                        target="_blank">
+                        Demander un accès
+                    </a>
+                </button>
+            </div>
+        </section>
+        <section id="connectionAlertes" class="content">
+            <div class="containerConnection">
+                <div id="connection">
+                    <form id="loginForm">
+                        <label for="username">Identifiant :</label>
+                        <input type="text" id="username" required>
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" required>
+                        <button type="submit">Connexion</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="contenusAlertes" class="content">
+            <div class="containerAlertes">
+                <div id="alertesList">
+                </div>
             </div>
         </section>
         <section id="retoucheurChaatnez" class="content">
