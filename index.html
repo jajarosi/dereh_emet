@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>Dereh Emet</title>
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div id="title">
-            <h1>DEREH EMET</h1>
-            <h5 style="color: white;">RAV CHALOM LEVY</h5>
+            <div class="titreHaut">
+                <p>DEREH EMET</p>
+                <h2 style="color: white;">RAV CHALOM LEVY</h2>
+            </div>
             <span id="bsd">בס״ד</span>
             <div id="menu">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark no-margin-bottom">
@@ -29,28 +31,77 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                             <ul class="navbar-nav ml-center">
+                                <li class="nav-item dropdown mx-2">
+                                    <button class="btn btn-dark dropdown-toggle" id="chaatnezDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Chaatnez
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="chaatnezDropdown"
+                                        style="background: rgb(215,183,183);
+                                        background: linear-gradient(180deg, rgba(231,203,177,1) 83%, rgba(231,203,177,1) 83%);">
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="formationChaatnez">Formations Professionnelles</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="conferencesChaatnez">Conférences</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="livresChaatnez">Livres</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="centreFChaatnez">Centres de Formation</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="verificateursChaatnez">Vérificateurs Diplomés Dereh-Emet</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="videosChaatnez">Mini
+                                            Films</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="alertesChaatnez">Alertes</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="retoucheurChaatnez">Retoucheurs Conseillés</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown mx-2">
+                                    <button class="btn btn-dark dropdown-toggle" id="sofroutDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        École de Sofrout
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="sofroutDropdown"
+                                        style="background: rgb(215,183,183);
+                                    background: linear-gradient(180deg, rgba(231,203,177,1) 83%, rgba(231,203,177,1) 83%);">
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="formAduSofrout">Formations Adultes</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="formEnfSofrout">Formation Enfants</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="centreSofrout">Centres de Formation</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            data-section="sofrimsFormes">Sofrims Formés</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="btn btn-dark" href="javascript:void(0)" data-section="livres">Livres
+                                        Publiés</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="btn btn-dark" href="javascript:void(0)" data-section="cours">Infos</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="btn btn-dark" href="javascript:void(0)" data-section="kollel">Kollel
+                                        Chaatnez</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="btn btn-dark" href="javascript:void(0)" data-section="projet">Projet De
+                                        Locaux</a>
+                                </li>
                                 <li class="nav-item mx-2">
                                     <a class="btn btn-dark" href="javascript:void(0)"
-                                        data-section="chaatnez">Chaatnez</a>
-                                </li>
-                                <li class="nav-item mx-2">
-                                    <a class="btn btn-dark" href="javascript:void(0)" data-section="sofrout">Sofrout</a>
-                                </li>
-                                <li class="nav-item mx-2">
-                                    <a class="btn btn-dark" href="javascript:void(0)" data-section="livres">Livres</a>
-                                </li>
-                                <li class="nav-item mx-2">
-                                    <a class="btn btn-dark" href="javascript:void(0)" data-section="divers">Divers</a>
+                                        data-section="gmiloutHassadim">Gmilout Hassadim</a>
                                 </li>
                                 <li class="nav-item mx-2">
                                     <a class="btn btn-dark" href="javascript:void(0)"
                                         data-section="contact">Contactez-nous</a>
                                 </li>
                                 <li class="nav-item mx-2">
-                                    <a class="btn btn-dark" href="https://www.allodons.fr/dereh-emet" target="_blank"
-                                        data-section="home">Dons</a>
+                                    <a class="btn btn-dark" href="javascript:void(0)" data-section="dons">Dons</a>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -60,91 +111,776 @@
     </header>
 
     <main id="container">
+
+        <!-- ----------------------------------- HOME ------------------------------------------------------------------ -->
+
         <section id="home">
-            <div id="article">
+            <!-- <div id="article">
                 <img src="./images/article/article1.jpg" id="imgLeftSide">
-            </div>
+            </div> -->
             <div id="text-home">
-                <div class="marquee-container">
-                    <marquee>
-                        <img style="width: 240px; height: 240px;"
-                            src="./images/sofrout/DSC01847.JPG">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <img style="width: 240px; height: 240px;"
-                            src="./images/sofrout/DSC02109 - Copie.JPG">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <img style="width: 240px; height: 240px;"
-                            src="./images/sofrout/DSC02137.JPG">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <img style="width: 240px; height: 240px;"
-                            src="./images/sofrout/DSC02398.JPG">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <img style="width: 240px; height: 240px;" src="./images/sofrout/DSC02405.JPG">
-                    </marquee>
+                <div class="homeText" style="padding-top: 20px;">
+                    <h2>Dereh Emet </h2>
+                    <p>L’association Déré’h Emet existe maintenant depuis 22 ans avec l’aide du créateur, à Paris dans
+                        le 3 ème arrondissement (la Yéchiva qui a accueilli des jeunes et moins jeunes pendant plus de
+                        10
+                        ans, un kollel à temps plein, le beth hamidrach, le laboratoire de chaatnez, les offices, plus
+                        de 150
+                        conférences sur le chaatnez sur toute la France, les repas pour les pauvres, etc…)</p>
+                    <p>En parallèle, il y a 10 ans en Israël la création de l’association Dere’h Hatorah Vaavoda à
+                        Jérusalem vise à s’occuper des francophones particulièrement (formation de vérificateurs du
+                        chaatnez à ce jour 30 diplômés en France et en Israël, formation de sofrim STAM - Séfer Torah,
+                        Téfilin, Mézouzot, formation de jeunes sofrim avec des élèves de 10 à 15 ans à Jérusalem - Baït
+                        Vagan. La mise en place du kollel de sofrout et de chaatnez. Les conférences de sensibilisation
+                        au
+                        chaatnez la production de 10 minis-films sur le chaatnez. Cours pour femmes par la Rabanite
+                        Y.E. Lévy.)</p>
+                    <p>Le but est d’agrandir le centre de Jérusalem pour les cours, l’hébergement et les repas pour les
+                        élèves n’habitant pas Jérusalem.</p>
+                    <p>Pour cela il vous est proposé, écrits par le Rav Lévy :</p>
+                    <ul>
+                        <li>5 grands Pitoum Hakétoret (2x cm de hauteur) à 1 200 euros pièce</li>
+                        <li>18 Pitoum Hakétoret (20 cm de hauteur) à 520 euros pièce</li>
+                        <li>2 Méguilot Esther (xx cm de hauteur) à 2 500 euros pièce</li>
+                        <li>1 Meguila Esther (xx cm de hauteur) à 3 500 euros</li>
+                        <li>2 Lamnatséa’h en Ménora à encadrer (21x29 cm) à 360 euros pièce</li>
+                        <li>4 Lamnatséa’h en Ménora à encadrer (31x40 cm) à 520 euros pièce </li>
+                        <li>Mézouzot 15 cm à 120 euros pièce</li>
+                        <li>Mézouzot 20 cm à 200 euros pièce</li>
+                    </ul>
+                    <p> MERCI DE VOTRE GENEROSITE </p>
+                    <h2>Rav Chalom Lévy</h2>
+                    <h6>directeur</h6>
+
                 </div>
-                <div style="padding-top: 20px;">
-                    <h2>Dereh Emet ?</h2>
-                    <p>L'association Déré'h Emet existe maintenant depuis 20 ans pour le Kavod de la Torah avec l'aide
-                        du créateur. Ses actions ont d'abord commencé à Paris au 5 Rue Sainte Anastase dans le ème
-                        arrondissement, avec :</p>
-                    <ul>
-                        <li>le fonctionnement de la Yéchiva qui a accueilli des jeunes et moins jeunes pendant plus de
-                            10 ans,</li>
-                        <li>un kollel à temps plein,</li>
-                        <li>le laboratoire de chaatnez,</li>
-                        <li>les offices, les repas pour les pauvres, etc...</li>
-                    </ul>
-                    <p> Puis, il y a 10 ans en Israël la création de l'association Dere'h Hatorah Vaavoda à Jérusalem
-                        qui vise à s'occuper des francophones exclusivement.
-                        Aujourd'hui l'essentiel des activités est concenue sur :</p>
-                    <ul>
-                        <li>La formation de vérificateurs du chaatnez à ce jour 30 diplômés exercent en France et en
-                        </li>
-                        Israël).
-                        <li>La formation de sofrim STAM (à ce jour une quinzaine d'élèves) sur 3 centres à</li>
-                        Jérusalem.
-                        <li>La mise en place du kollel de sofrout et de chaatnez pour éditer des livres sur ces 2</li>
-                        domaines.
-                        <li>Les conférences de sensibilisation.</li>
-                        <li>Le suivi des jeunes qui arrivent difficilement à trouver leur place dans notre époque. Le
-                        </li>
-                        placement et le suivi des élèves de Yéchiva (cours de sofrout et de vérification du chaatnez
-                        adaptés qui leur permettront au bout de 2 ans de Yéchiva d'avoir un début d'autonomie
-                        financière).
-                        <li>Cours pour femmes par la Rabanite Y.E. Levy.</li>
-                    </ul>
-                    <p> Le but est de développer tous ces axes de travail et de créer des centres en Israel où les
-                        besoins sont grand</p>
-                    <h2>Rav Chalom Levy</h2>
+
+                <div class="image-scroll-container">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/acceuil.jpg">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/acceuil1.JPG">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/acceuil2.JPG">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/acceuil3.JPG">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/acceuil4.JPG">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/acceuil5.JPG">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/acceuil6.JPG">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/acceuil7.JPG">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/ariel3.jpg">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/chimon-melloul.jpg">
+                    <img style="width: 200px; height: 200px;" src="./images/acceuil/zafrana-David.jpg">
                 </div>
             </div>
-        </section>
-        <section id="chaatnez" class="content">
-            <h2>Chaatnez</h2>
-        </section>
-        <section id="sofrout" class="content">
-            <h2>Sofrout</h2>
-        </section>
-        <section id="livres" class="content">
-            <h2>Livres Édités</h2>
         </section>
 
-        <section id="divers" class="content">
-            <h2>Divers</h2>
+
+        <!-- ----------------------------------- CHAATNEZ ------------------------------------------------------------------ -->
+
+        <section id="formationChaatnez" class="content">
+            <div class="titleSection">
+                <h2>Formation Chaatnez</h2>
+            </div>
+            <div class="contenue">
+                <div>
+                    <p>Le but de cette formation est:</p>
+                    <ul>
+                        <li>De connaître précisément cette mitsva : savoir vérifier un vêtement et connaître les lois du
+                            Choul’han Arou’h.</li>
+                        <li>D’arriver à comprendre comment est fabriqué un vêtement.</li>
+                        <li>De connaître l’utilisation du microscope professionnel.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p> ORGANISATION PRATIQUE DE LA FORMATION: </p>
+                    <p>En Israël plusieurs lieux de formation:</p>
+                    <ul>
+                        <li>Jérusalem, Ranana, Natania, Tel Aviv.</li>
+                        <li>Dans un lieu adapté par exemple Synagogue ou Beth Hamidrach.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>PROGRAMME DE LA FORMATION:</p>
+                    <ul>
+                        <li>Connaissance du fil, du tissu, du microscope, utilisation d’une loupe et de la pince**,...
+                        </li>
+                        <li>Vérifier la composition d’un tissu,</li>
+                        <li>Connaissance des points de contrôle des vêtements simples à vérifier (écharpes, pulls,
+                            cravates,
+                            etc...)</li>
+                        <li>Connaissance de la vérification d’une veste, pantalon, manteau, ...</li>
+                        <li>Etude du Choul’han Arou’h</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>DUREE DE LA FORMATION:</p>
+                    <ul>
+                        <li>Environ 3 séances de 1h30 environ par mois pendant 8 mois.</li>
+                        <li>Travail à la maison d’un cours à l’autre.</li>
+                        <li>Suivi des questions après la formation.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>MATERIEL DE LA FORMATION:</p>
+                    <ul>
+                        <li>PRÊT d’un microscope et de tout le matériel de vérification pendant 8 mois.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>**fourniture de la loupe et de la pince ainsi que tout le matériel de vérification</p>
+                </div>
+            </div>
         </section>
+        <section id="conferencesChaatnez" class="content">
+            <div class="titleSection">
+                <h2>Conférence en tois parties</h2>
+            </div>
+            <div class="contenue">
+                <div>
+                    <h5>1ère partie</h5>
+                    <p>La mitsva du chaatnez – vidéos , photos et démonstration concrète sur des vêtements.</p>
+                    <h5>2ème partie</h5>
+                    <p>Les raisons cachées et profondes de la mitsva – commentateurs, Zohar, etc...</p>
+                    <h5>3ème partie</h5>
+                    <p>Pourquoi cette mitsva revient dans notre époque, questions & conclusion.</p>
+                </div>
+                <div>
+                    <h5>PLUS DE CENT CONFERENCES EN FRANCE</h5>
+                    <ul>
+                        <li>Yéchiva d’été du Rav Braham- Communauté Ohel Yossef- Pantin (93)</li>
+                        <li>Ecole du Rav Sitruk- 26 Rue Garnier à Neuilly-sur-Seine(92)</li>
+                        <li>Yéchiva d’été Créteil (94)</li>
+                        <li>Ecole Ozar Hatorah de Paris 13è et de Créteil (94) – 2 conférences</li>
+                        <li>Ecole juive de Montpellier (34)</li>
+                        <li>Ecole Yavné- 29 Avenue Léon Bollet – Paris 13è (plusieurs fois)</li>
+                        <li>Ecole du Raincy à Gagny (93) (section garçons) – environ 25 conférences à différentes
+                            classes
+                            Séminaire
+                            du Rav Attia, Rue Hyppolitte Kahn, Villeurbanne (69)</li>
+                        <li>Synaguogue C.I.V., 4 Rue Malherbe, Villeurbanne (69)</li>
+                        <li>Yéchiva du Raincy, Rav Tolédano, Le Raincy-Villemonble (93)</li>
+                        <li>'Haya mouchka, 49 Rue Petit, 75019 Paris</li>
+                        <p> Etc...</p>
+                    </ul>
+                    <h5>EN ISRAEL</h5>
+                    <ul>
+                        <li>Yéchiva Ner Yossef- Réhov Yoël - Guivat Zeev - JERUSALEM (plusieurs fois)</li>
+                        <li>Yéchiva Kol Torah- Baït Vagan – JERUSALEM</li>
+                        <li>Yéchiva Torah mitsion - Guivat Zeev – JERUSALEM etc....</li>
+                    </ul>
+                    <p>* pour toute demande de conférence, contacter par le mail levychalom@gmail.com</p>
+                </div>
+            </div>
+        </section>
+        <section id="livresChaatnez" class="content">
+            <div class="titleSection">
+                <h2>LIVRES PUBLIES SUR LE CHAATNEZ</h2>
+            </div>
+            <div class="contenue">
+                <h4>Les lois du chaatnez</h4> - 100 pages (Edité en 5771) - article paru dans la revue KOUNTASS .
+                <h4>Guide pratique : alerte chaatnez </h4> - 90 pages (Edité en 5784)
+                <p>POUR TOUTE COMMANDE</p>
+                <ul>
+                    <li>à partir de la France 0177380062 ou 0663658797</li>
+                    <li>En Israël 054 84 613 59 ou 053 708 08 55</li>
+                    <li><a href="mailto:dereh.emet@gmail.com"> dereh.emet@gmail.com</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="centreFChaatnez" class="content">
+            <div class="titleSection">
+                <h2>CENTRES DE FORMATION PROFESSIONNELLE A LA VERIFICATION DU CHAATNEZ</h2>
+            </div>
+            <div class="contenue">
+                <h5>JERUSALEM</h5>
+                <ul>
+                    <li>CENTRE DÉRE’H EMET RAMOT DALET </li>
+                    <li>CENTRE DÉRE’H EMET CENTRE BAIT VAGAN </li>
+                </ul>
+                <h5> PLUSIEURS AUTRES POSSIBILTES</h5>
+                <ul>
+                    <li>TEL AVIV</li>
+                    <li>RANANA</li>
+                    <li>NATANIA</li>
+                </ul>
+            </div>
+        </section>
+        <section id="verificateursChaatnez" class="content">
+            <div class="titleSection">
+                <h2>LISTE DES VERIFICATEURS PROFESSIONNELLES DU CHAATNEZ </h2>
+                <h3>DIPLOMES PAR LE RAV CHALOM LEVY</h3>
+            </div>
+            <div class="contenue">
+                <div>
+                    <h5>FRANCE</h5>
+                    <h6> LYON - VILLEURBANNE</h6>
+                    <ul>
+                        <li>DAVID COHEN - 06 61 24 72 90</li>
+                        <li>GAMLIEL DAHAN - 06 22 67 40 53</li>
+                        <li>YAAKOV ELBAZ - 06 60 04 37 05</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6> PARIS - REGION PARISIENNE</h6>
+                    <ul>
+                        <li>DAVID BERDAA - 06 15 82 25 12 (92 et alentours) </li>
+                        <li>DAVID ZAFRANA - 06 64 58 00 69 (92, 93, 95 et alentours) </li>
+                        <li>HAIM YAAKOV CHARBIT 06 01 21 80 21 (11è, 16è, 4è et alentours) </li>
+                        <li>YONATHAN FHIMA - 06 45 19 33 18 (19è, 4è et alentours)</li>
+                        <li>ITSHAK ITAH - 06 68 04 87 28 (92 et alentours, 19è) </li>
+                        <li>Rav RAHAMIM SMADJA 06 28 67 25 87(4è et alentours) </li>
+                        <li>AVRAHAM HAYOUN 06 15 48 45 27(4è et alentours,16è)</li>
+                        <li>Rav MOCHE LAMKYES 07 67 73 67 67 (11è, 93)</li>
+                        <li>CHOMRIEL COHEN 06 65 56 20 35 (16è, 19è et alentours)</li>
+
+                        <li>ARIEL ETYNGIER - 06 77 98 82 28 (92 et alentours) </li>
+                        <li>YOHANAN MURCIANO - 06 35 36 71 14 (11è, 92 et alentours) </li>
+                        <li>AVRAHAM CHARBIT - 06 19 70 81 91 (11è, 3è, 4è et alentours) </li>
+                        <li>ARIE IFERGAN - 06 52 18 78 93 (16è, Levallois Perret) </li>
+                        <li>Rav MEIR SITRUK t 07 83 05 12 34 (16è et alentours) </li>
+                        <li>RAPHAEL BOBOT 06 52 56 01 31(Créteil et alentours,16è) </li>
+                        <li>DAVID MAREK 07 667 677 73 (4è et alentours,16è) </li>
+                        <li>ITSHAK ALTMANN 06 29 38 45 29 (92 et alentours) </li>
+                        <li>YOSSEF COHEN 07 82 72 66 12 (16è, Enghien et alentours) </li>
+                    </ul>
+                </div>
+                <div>
+                    <h6> MARSEILLE-MONTPELLIER</h6>
+                    <ul>
+                        <li>RAV YOSSEF BANON - 06 23 88 27 16</li>
+                        <li>YGAL COHEN - 07 78 82 35 17</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6>TOULOUSE-BORDEAUX</h6>
+                    </ul>
+                    <li>MICHAEL EMSELLEM - 06 88 97 94 36</li>
+                    <ul>
+                </div>
+                <div>
+                    <h5> ISRAEL </h5>
+                    <h6> RAANANA</h6>
+                    <ul>
+                        <li>AARON PARTOUCHE - 052 761 97 37</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6>JERUSALEM</h6>
+                    <ul>
+                        <li>RAV CHALOM LEVY - 054 84 613 59 (Ramot, Baït Vagan)</li>
+                        <li>CHLOMO COHEN - 054 797 68 83 (BAKA et environs)</li>
+                        <li>YOHANAN-YONI AZOULAY - 058 328 04 46 (Kiriat Yovel et environs)</li>
+                        <li>ZAKARY WAYNER - 053 410 32 05 (HAR Nof et environs)</li>
+                        <li>YOSSEF SELLEM - 052 735 11 08 (Kiriat Yovel et environs)</li>
+                        <li>DAVID BENCHETRIT - 058 322 39 19 (Kiriat Yovel et environs)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6>NATANIA</h6>
+                    <ul>
+                        <li>DAVID GAMRASNI - 058 455 55 31</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6>BNE BRAK</h6>
+                    <ul>
+                        <li>HILLEL FENECH - 058 411 15 81</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="videosChaatnez" class="content">
+            <div class="containerChaatnez">
+                <div id="videoList">
+                </div>
+            </div>
+        </section>
+        <section id="alertesChaatnez" class="content">
+            <div class="titleSection">
+                <h2>LES ALERTES DU CHAATNEZ</h2>
+                <h5>RESERVE AUX ABONNES</h5>
+            </div>
+            <div class="choiceAlertes">
+                <button id="btnLogin">
+                    <a href="javascript:void(0)" data-section="connectionAlertes">Alertes</a>
+                </button>
+                <button id="btnRequestAccess" class="btn btn-secondary">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSekU6CkW_AOQ-1pFofAtmYORcZiZYtNbIKXJqnwAzA-ApCa0A/viewform?usp=header"
+                        target="_blank">
+                        Demander un accès
+                    </a>
+                </button>
+            </div>
+        </section>
+        <section id="connectionAlertes" class="content">
+            <div class="containerConnection">
+                <div id="connection">
+                    <form id="loginForm">
+                        <label for="username">Identifiant :</label>
+                        <input type="text" id="username" required>
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" required>
+                        <button type="submit">Connexion</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="contenusAlertes" class="content">
+            <div class="containerAlertes">
+                <h1>Liste des Alertes</h1>
+                <ul id="brands-list"></ul> <!-- Liste des marques -->
+
+                <!-- Modal -->
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 id="modal-brand-name"></h2>
+
+                        <div id="image-container">
+                            <iframe id="pdf-viewer" src="" max-width="80%" max-height="500px" frameborder="0"></iframe>
+                            <button id="prev-image">❮</button>
+                            <img id="modal-image" src="" alt="Image" />
+                            <button id="next-image">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="retoucheurChaatnez" class="content">
+            <div class="titleSection">
+                <h2>RETOUCHEURS CONSEILLES POUR LES REPARATIONS CHAATNEZ</h2>
+            </div>
+            <div class="contenue">
+                <h3>EN FRANCE</h3>
+                <p>
+                    MAISON JACOB
+                    49 Rue de Turenne
+                    75003 PARIS
+                </p>
+                <ul>
+                    <li>Yaakov ABBOU : 0033 (0) 6 82 90 11 28</li>
+                </ul>
+                <h3>EN ISRAËL</h3>
+                <p>
+                    DANIEL COHEN
+                    62 RE’HOV CHIMON AGASSI Côté parking
+                    HAR NOFF- JERUSALEM</p>
+                <ul>
+                    <li>Daniel COHEN : 00972 (0) 52 764 77 43</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- ----------------------------------- SOFROUT ------------------------------------------------------------------ -->
+
+        <section id="formAduSofrout" class="contentSofrout">
+            <div class="titleSection">
+                <h2>LES FORMATIONS PROFESSIONNELLES A LA SOFROUT POUR ADULTES</h2>
+            </div>
+            <div class="contenueSofrout">
+                <h3>PARTIE KTIVA</h3>
+                <ul>
+                    <li>TOUT LE MATERIEL EST FOURNI</li>
+                    <li>UN OU DEUX CHIOURIM D’UNE HEURE PAR SEMAINE</li>
+                    <li>SALLE DE SOFROUT EQUIPE - LIBRE SERVICE</li>
+                    <li>TAILLE DE LA PLUME - ECRITURE SUR KLAF - TIKOUNIM</li>
+                    <li>COMMENCER L'ECRITURE D'UNE MEGUILA D'ESTHER</li>
+                </ul>
+                <h3>PARTIE HALA’HA</h3>
+                <ul>
+                    <li>PREPARATION AUX EXAMENS DE SOUFROUT RECONNUS</li>
+                </ul>
+            </div>
+            <div class="slider-container">
+                <div class="slider-images">
+                    <img src="./images/sofrout/ecole-sofrout1.JPG">
+                    <img src="./images/sofrout/ecole-sofrout2.JPG">
+                    <img src="./images/sofrout/ecole-sofrout3.JPG">
+                    <img src="./images/sofrout/ecole-sofrout4.JPG">
+                    <img src="./images/sofrout/ecole-sofrout5.JPG">
+                </div>
+            </div>
+        </section>
+        <section id="formEnfSofrout" class="contentSofrout">
+            <div class="titleSection">
+                <h2>LES FORMATIONS A LA SOFROUT POUR ENFANTS</h2>
+            </div>
+            <div class="contenueSofrout">
+                <div>
+                    <h3>PARTIE KTIVA</h3>
+                    <ul>
+                        <li>TOUT LE MATERIEL EST FOURNI</li>
+                        <li>UN OU DEUX CHIOURIM D’UNE HEURE PAR SEMAINE</li>
+                        <li>SALLE DE SOFROUT EQUIPE - LIBRE SERVICE</li>
+                        <li>TAILLE DE LA PLUME - ECRITURE SUR KLAF - TIKOUNIM</li>
+                        <li>ECRIRE UNE MEGUILA</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>PARTIE HALA’HA</h3>
+                    <ul>
+                        <li>CHIOUR DE 30mn PAR SEMAINE</li>
+                        <li>DEBUT PREPARATION AUX EXAMENS DE SOUFROUT RECONNUS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slider-container">
+                <div class="slider-images">
+                    <img src="./images/sofrout/ecole-sofrout1.JPG">
+                    <img src="./images/sofrout/ecole-sofrout2.JPG">
+                    <img src="./images/sofrout/ecole-sofrout3.JPG">
+                    <img src="./images/sofrout/ecole-sofrout4.JPG">
+                    <img src="./images/sofrout/ecole-sofrout5.JPG">
+                </div>
+            </div>
+        </section>
+        <section id="centreSofrout" class="contentSofrout">
+            <div class="titleSection">
+                <h2>LES CENTRES DE FORMATION</h2>
+            </div>
+            <div class="contenueSofrout">
+                <ol>
+                    <li>centre dereh.emet - Jérusalem - Ramot dalet</li>
+                    <li>centre dereh.emet - Jérusalem - Bait Vagan</li>
+                </ol>
+            </div>
+            <div class="slider-container">
+                <div class="slider-images">
+                    <img src="./images/sofrout/ecole-sofrout1.JPG">
+                    <img src="./images/sofrout/ecole-sofrout2.JPG">
+                    <img src="./images/sofrout/ecole-sofrout3.JPG">
+                    <img src="./images/sofrout/ecole-sofrout4.JPG">
+                    <img src="./images/sofrout/ecole-sofrout5.JPG">
+                </div>
+            </div>
+        </section>
+        <section id="sofrimsFormes" class="contentSofrout">
+            <div class="titleSection">
+                <h2>LES SOFRIMS FORMES PAR DERE'H EMET</h2>
+            </div>
+            <div class="contenueSofrout">
+                <div>
+                    <ul>
+                        <li>RAV YO’HANAN PARTOUCHE - JERUSALEM - GUIVAAT ZEEV</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>nous <a href="javascript:void(0)" data-section="contact">contacter</a> pour plus de
+                        d'informations
+                        et coordonnées des sofrim.</h3>
+                </div>
+            </div>
+            <div class="slider-container">
+                <div class="slider-images">
+                    <img src="./images/sofrout/ecole-sofrout1.JPG">
+                    <img src="./images/sofrout/ecole-sofrout2.JPG">
+                    <img src="./images/sofrout/ecole-sofrout3.JPG">
+                    <img src="./images/sofrout/ecole-sofrout4.JPG">
+                    <img src="./images/sofrout/ecole-sofrout5.JPG">
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------------------------------- LIVRES EDITES------------------------------------------------------------------ -->
+
+        <section id="livres" class="content">
+            <div class="titleSection">
+                <h2>Livres Édités</h2>
+            </div>
+            <div class="livreSection">
+                <div class="livresTitre">
+                    <ol>
+                        <li> LES LOIS DU CHAATNEZ - 100 pages</li>
+                        <ul>
+                            <li>France: 15 euros</li>
+                            <li>Israël: 60 chékel</li>
+                        </ul>
+                        <br>
+                        <li> GUIDES PRATIQUE "ALERTE CHAATNEZ" - 96 pages</li>
+                        <ul>
+                            <li>France: 15 euros</li>
+                            <li>Israël: 50 chékel</li>
+                        </ul>
+                        <br>
+                        <li> SUIVI DE SON ETUDE MICHNA - (toutes les michnaiot à cocher)</li>
+                        <ul>
+                            <li>France: 10 euros</li>
+                            <li>Israël: 40 chékel</li>
+                        </ul>
+                        <br>
+                        <li> SUIVI DE SON ETUDE GUEMARA - (tous les dapim de toutes les guemarot à cocher)</li>
+                        <ul>
+                            <li>Israël: 5 chékel</li>
+                        </ul>
+                    </ol>
+                    <div>
+                        <p>Les frais d’envois sont inclus dans le prix sauf pour SUIVI DE SON ETUDE GUEMARA </p>
+                        <p> Pour toute commande, vos coordonnées par mail: dereh.emet@mail.com</p>
+                        <p> Règlement par virement</p>
+                    </div>
+                    <div class="livresPicture">
+                        <div class="livreContainer"><img src="./images/livres/emploiMichna.png" class="imageLivre">
+                        </div>
+                        <div class="livreContainer"><img src="./images/livres/loiDuChaatnez.png" class="imageLivre">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="livreArticle">
+                    <img src="./images/article/article1.jpg" id="imgLeftSide">
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------------------------------- COURS ------------------------------------------------------------------ -->
+
+        <section id="cours" class="content">
+            <div class="titleCours">
+                <!-- <h2>COURS TORAH DAMES ET JEUNES FILLES</h2>
+                <h3>COURS SCOLAIRES ENFANTS </h3>
+                <h4>RABANNITE YEHOUDIT ESTHER LEVY</h4> -->
+                <h2>Infos</h2>
+            </div>
+            <div>
+                <h4>Emission Radio J</h4>
+                <audio controls style="width: 200px
+                ;">
+                    <source src="./images/audios/radio-j.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <!-- <audio controls>
+                    <source src="./images/audios/radio-j.ogg" type="audio/ogg">
+                    Your browser does not support the audio element.
+                </audio> -->
+                <!-- <h6>Contacter En Israël le 053 436 36 89</h6>
+                <ol>
+                    <li>COURS POUR ENFANTS :
+                        <ul>
+                            <li>APPRENDRE A ECRIRE ET LIRE LE FRANCAIS</li>
+                        </ul>
+                    </li>
+                    <li>COURS POUR DAMES ET JEUNES FILLES:
+                        <ul>
+                            <li>LA MA'HACHAVA (COMPRENDRE SES PENSEES)</li>
+                            <li>COURS SUR LA CONSTRUCTION PERSONNELLE</li>
+                            <li>COURS SUR LA EMOUNA</li>
+                        </ul>
+                    </li>
+
+                </ol> -->
+            </div>
+            <div id="Michna">
+                <h4>Michna Kilaim 4</h4>
+                <button class="switchBtn downloadBtn" onclick="togglePdf('Michna')">Afficher le PDF</button>
+                <a href="./images/infos/Michna-kilaim-4.pdf" download="michna-kilaim-4.pdf" target="_blank"
+                    data-section="cours">
+                    <button class="downloadBtn">Télécharger le PDF</button>
+                </a>
+                <iframe id="pdfViewerMichna" src="./images/infos/Michna-kilaim-4.pdf" width="100%" height="500px"
+                    frameborder="0" style="display: none;"></iframe>
+            </div>
+            <div id="TraductionCA">
+                <h4>Traduction Choul'han Arou’h</h4>
+                <button class="switchBtn downloadBtn" onclick="togglePdf('TraductionCA')">Afficher le PDF</button>
+                <a href="./images/infos/TRADUCTION-CHOUL'HAN-AROU'H.pdf" download="michna-kilaim-4.pdf" target="_blank"
+                    data-section="cours">
+                    <button class="downloadBtn">Télécharger le PDF</button>
+                </a>
+                <iframe id="pdfViewerTraductionCA" src="./images/infos/TRADUCTION-CHOUL'HAN-AROU'H.pdf" width="100%"
+                    height="500px" frameborder="0" style="display: none;"></iframe>
+            </div>
+
+        </section>
+        <!-- ----------------------------------- KOLLEL ------------------------------------------------------------------ -->
+
+        <section id="kollel" class="content">
+            <div class="titleSection">
+                <h2>Kollel</h2>
+            </div>
+            <div class="left-side">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/chaatnez/KOLLEL-CHAATNEZ1.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/chaatnez/KOLLEL-CHAATNEZ6.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/chaatnez/KOLLEL-CHAATNEZ4.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/chaatnez/KOLLEL-CHAATNEZ5.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/chaatnez/KOLLEL-CHAATNEZ2.JPG"
+                    alt="">
+            </div>
+            <div class="contenue">
+                <div>
+                    <ol>
+                        <li> TOUR - CHOUL'HAN AROU'H (YORE DEA)</li>
+                        <li>REDACTION DE KITSOURIM et LIVRES SUR LE CHAATNEZ</li>
+                        <li>CONFERENCES AUX COMMUNAUTES </li>
+                    </ol>
+                </div>
+                <div>
+                    <p>Programme du kollel chaatnez:</p>
+                    <ul>
+                        <li>Etude des michnaiot de kilaïm, guemarot babli (Rachi, Tosfot, Maarcha), guemarot Yeroushalmi
+                            sur
+                            kilaïm.</li>
+                        <li>Tour, Choul'han arou'h, cheelot et tchouvot.</li>
+                        <li>Le RAMBAM et Dereh émouna du Rav Haïm Kanievski zal.</li>
+                        <li>Former des verificateurs specialistes en hala'ha et chitot </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Kollel mi-temps l'apres midi</p>
+                    <ol>
+                        <li>ouverture du kollel apres Pessa'h 5784 (8 Mai 2024 - Rosh ´hodesh Iyar)</li>
+                        <li>effectifs du kollel: 4 personnes</li>
+                        <li>nous <a href="javascript:void(0)" data-section="contact">contacter</a> pour plus
+                            d'informations.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="right-side">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/chaatnez/cours-beth-hamidrach.jpg"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;"
+                    src="./images/chaatnez/cours-ecole-montpellier.jpg" alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/chaatnez/KOLLEL-CHAATNEZ.JPG"
+                    alt="">
+                <img style="width: 300px; height: 400px; padding:10px;" src="./images/chaatnez/KOLLEL-CHAATNEZ7.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/chaatnez/KOLLEL-CHAATNEZ3.JPG"
+                    alt="">
+            </div>
+        </section>
+
+        <!-- ----------------------------------- PROJETS ------------------------------------------------------------------ -->
+
+        <section id="projet" class="content">
+            <div class="titleSection">
+                <h2>PROJET D’UN CENTRE DÉDIÉ AU CHAATNEZ À JÉRUSALEM</h2>
+            </div>
+            <div class="left-side">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/projet-locaux/PROJET-BINIAN1.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/projet-locaux/PROJET-BINIAN2.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/projet-locaux/PROJET-BINIAN3.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/projet-locaux/PROJET-BINIAN4.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/projet-locaux/PROJET-BINIAN5.JPG"
+                    alt="">
+            </div>
+            <div class="contenue">
+                <p>La création d’un centre qui regroupera, dans un unique endroit l’ensemble des activités liées au
+                    chaatnez, est le grand projet final de 20 années de travail sur la mitsva du chaatnez.</p>
+                <p>Ce centre regroupera essentiellement :</p>
+                <ol>
+                    <li> LE CENTRE DE FORMATION A LA VERIFICATION DU CHAATNEZ</li>
+                    <li> LES DOCUMENTS RELATIFS AUX FORMATIONS PROFESSIONNELLES</li>
+                    <li> LES CONFERENCES SUR LE CHAATNEZ</li>
+                    <li> LES LIVRES PUBLIES SUR LE CHAATNEZ, LES MINI FILM, ...</li>
+                    <li> UN LABORATOIRE DE VERIFICATION DU CHAATNEZ DERE'H EMET</li>
+                    <li> CE CENTRE DEVRA ETRE IMPLANTÉ DANS JERUSALEM</li>
+                    <li> LA LOCATION D'UN LOCAL A PLUSIEURS PIECES OU D'UN APPARTEMENT EST ENVISAGÉ AU DEPART</li>
+                    <li> LA CONSTRUCTION EN DUR OU EN PREFABRIQUE SE FERA PAR LA SUITE</li>
+                    <li> Le nom du futur centre est réservé au donateur qui s'engagera à financer tout ou partie des
+                        frais de fonctionnement de cet endroit unique en son genre</li>
+                    <li> NOUS <a href="javascript:void(0)" data-section="contact">CONTACTER </a> POUR PLUS
+                        D'INFORMATIONS.</li>
+                </ol>
+                <p>ETC ...</p>
+            </div>
+            <div class="right-side">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/projet-locaux/PROJET-BINIAN6.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/projet-locaux/PROJET-BINIAN7.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/projet-locaux/PROJET-BINIAN8.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/projet-locaux/PROJET-BINIAN9.JPG"
+                    alt="">
+                <img style="width: 300px; height: 300px; padding:10px;" src="./images/projet-locaux/PROJET-BINIAN10.JPG"
+                    alt="">
+            </div>
+        </section>
+
+        <!-- ----------------------------------- CONTACTS ------------------------------------------------------------------ -->
 
         <section id="contact" class="content">
-            <h2>Contactez-moi</h2>
-            <p>Pour toute question ou demande de renseignements, n'hésitez pas à me contacter :</p>
+            <!-- <div class="titleSection">
+                <h2>Contactez-moi</h2>
+            </div> -->
+            <div>
+                <p>Pour toute question ou demande de renseignements, n'hésitez pas à me contacter :</p>
 
-            <p>Email: dereh.emet@gmail.com</p>
-            <p>Téléphone: </p>
-            <p>fr: 01.77.38.00.62 ou 06.63.65.87.97</p>
-            <p> il: 054-846.13.59 ou 053-708.08.55</p>
-
+                <p>Email: <a href="mailto:dereh.emet@gmail.com"> dereh.emet@gmail.com</a></p>
+                <p>Téléphone: </p>
+                <p>fr: <a href="tel:+33177380062"> 01.77.38.00.62</a> ou <a href="tel:+33663658797"> 06.63.65.87.97</a>
+                </p>
+                <p> il: <a href="tel:+972548461359"> 054-846-1359</a> ou <a href="tel:+972537080855"> 053-708-0855</a>
+                </p>
+            </div>
+            <div>
+                <p>Email Chaatnez: <a href="mailto:chaatnez.dereh@gmail.com"> chaatnez.dereh@gmail.com</a></p>
+                <p>Conferences sur le Chaatnez: <a href="mailto:levychalom@gmail.com"> levychalom@gmail.com</a></p>
+                <p>Commande de livres sur le Chaatnez: <a href="mailto:dereh.emet@gmail.com"> dereh.emet@gmail.com</a>
+                </p>
+                <p>Obtenir la liste des verificateurs du Chaatnez: <a href="mailto:dereh.emet@gmail.com">
+                        dereh.emet@gmail.com</a></p>
+                <p>Inscription services alertes Chaatnez: <a href="mailto:dereh.emet@gmail.com">
+                        dereh.emet@gmail.com</a></p>
+            </div>
         </section>
+        <!-- ----------------------------------- GMILOUT HASSADIM ------------------------------------------------------------------ -->
+
+        <section id="gmiloutHassadim" class="content">
+            <div>
+                <div class="titleSection">
+                    <h2>GMILOUT HASSADIM</h2>
+                </div>
+                <div>
+                    <ol>
+                        <li>Prêts de dépannage</li>
+                        <li>Aides aux pauvres, nourriture</li>
+                        <li>Bourses d'étude</li>
+                        <li>Achat de matériel de sofrout, de chaatnez</li>
+                        <li>Accès aux cours de sofrout et/ou chaatnez gratuits</li>
+                        <li>Etc...</li>
+                    </ol>
+                    <p>Pour toute participation aller à « DONS » - cerfa automatique en France</p>
+                </div>
+            </div>
+        </section>
+        <!-- ----------------------------------- DONS ------------------------------------------------------------------ -->
+
+        <section id="dons" class="content">
+            <div>
+                <p>Faire un don en euros: <a class="btn btn-dark" href="https://www.allodons.fr/dereh-emet"
+                        target="_blank" data-section="dons">Appuyer ici</a></p>
+                <ol>
+                    <li>
+                        pour les dons en Israel, il est délivré un reçu 46 (équivalent cerfa): pour obtenir les
+                        coordonnées de notre
+                        banque en Israel: envoyé par mail à <a href="mailto:dereh.emet@gmail.com">
+                            dereh.emet@gmail.com</a>
+                    </li>
+                    <li>nous <a href="javascript:void(0)" data-section="contact">contacter</a> pour plus d'informations.
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+
+
+        <!-- -------------------------------------------------------------------------------------------------------------- -->
+
+
     </main>
+
+    <!-- -------------------------------------- FOOTER ------------------------------------------------------------------ -->
 
     <footer>
         <p>&copy; 2023 Dereh Emet. Tous droits réservés. RAV CHALOM LEVY</p>
         <p>A partir de la France 01.77.38.00.62 ou 06.63.65.87.97 En Israël 054-846.13.59 ou 053-708.08.55</p>
-        <p>Dereh.emet@gmail.com</p>
+        <p><a href="mailto:dereh.emet@gmail.com"> dereh.emet@gmail.com</a></p>
     </footer>
 </body>
 

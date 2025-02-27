@@ -8,10 +8,17 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: rgb(77, 107, 117);
+    background: linear-gradient(315deg, rgba(77, 107, 117, 0.26516544117647056) 26%, rgba(157, 109, 48, 0.2315519957983193) 87%);
+
     /* Pour assurer une hauteur minimale de la fenêtre visible */
 }
 
-header {
+img {
+    border-radius: 4px;
+}
+
+.header {
     background-image: url('./images/sofrout/fond-header.png');
     background-size: cover;
     background-position: center;
@@ -21,15 +28,38 @@ header {
     padding-top: 10px; */
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     top: 0;
     z-index: 1000;
     font-size: x-large;
+    height: 25vw;
+    /* height: 250px; */
+    /* height: 50%; */
+
 }
 
 h1 {
     color: white;
+}
+
+.titreHaut {
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.titreHaut p {
+    color: white;
+    font-size: 270%;
+    font-weight: 520;
+}
+
+@media screen and (max-width: 465px) {
+    .titreHaut p {
+        font-size: 100%;
+        /* Vous pouvez ajuster cette taille selon vos besoins */
+    }
 }
 
 #bsd {
@@ -40,6 +70,13 @@ h1 {
     right: 10px;
     top: 0;
     font-size: 23px;
+}
+
+#menu {
+    position: fixed;
+    top: 83%;
+    /* top: 22vw; */
+    width: 100%;
 }
 
 nav {
@@ -60,13 +97,31 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #fff;
+    font-size: larger;
 }
+
 
 main {
     flex-grow: 1;
     /* Pour que le contenu occupe l'espace restant entre le header et le footer */
+    margin-top: 20px;
     padding: 20px;
-    margin-top: 180px;
+    /* margin-top: 250px; */
+    font-size: x-large;
+}
+
+.titleSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px;
+    gap: 10px;
+}
+
+.content div {
+    margin: 25px;
+    padding: 10px;
 }
 
 footer {
@@ -84,6 +139,8 @@ footer {
     height: 100%;
     backdrop-filter: blur(2px);
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 #title>h1 {
@@ -94,52 +151,727 @@ footer {
     margin-bottom: 3px !important;
 }
 
-/* #article {
-    background-image: url("./images/article/article1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: fixed;
-    width: 20%;
-    left: 0;
-} */
-
 #home {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+    justify-content: center;
+    /* width: auto; */
+    /* grid-template-columns: 1fr 3fr; */
     /* Deux colonnes, la première occupe toute la largeur disponible, la deuxième ajuste à son contenu */
 }
 
-#article {
-    /* background-image: url('./images/article/article1.jpg');
-    background-size: cover; */
+.image-scroll-container {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+.image-scroll-container img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1200px);
+    }
+
+}
+
+.image-scroll-container img {
+    animation: scroll 20s linear infinite;
+}
+
+
+/* #article {
     height: 200vh;
-    width: 100%;
+    width: 25vw;
 }
 
 #imgLeftSide {
     max-width: 100%;
     height: auto;
-}
+} */
 
 #text-home {
     padding: 20px;
-}
-
-.marquee-container {
-    overflow: hidden;
-    /* Masque le débordement pour éviter des problèmes de mise en page */
-    white-space: nowrap;
-    /* Empêche le texte de passer à la ligne */
     width: 100%;
-    /* Ajuste la largeur selon tes besoins */
 }
 
-/* Ajoute du style aux images à l'intérieur de la marquee */
-.marquee img {
-    width: 240px;
-    height: 240px;
-    margin-right: 20px;
-    /* Espace entre les images, ajuste selon tes besoins */
+.homeText {
+    display: grid;
+    justify-items: center;
+}
+
+.containerChaatnez {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    height: 10000px;
+}
+
+.video-list-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#videoList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.video-list {
+    width: 70%;
+    height: 40vw;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.list-title {
+    font-size: smaller;
+    width: 70%;
+}
+
+.livreSection {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    height: 70% !important;
+}
+
+.livreTitre {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.livresPicture {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-gap: 10px;
+}
+
+.livreContainer {
+    flex-basis: 50%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.imageLivre {
+    width: 100%;
+    height: auto;
+}
+
+.titleCours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#projet,
+#kollel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.titleSection {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.titleSection h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.left-side,
+.right-side,
+.contenue {
+    grid-column: span 1;
+}
+
+.contenue {
+    grid-column: 2 / 3;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.downloadBtn {
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    #projet {
+        grid-template-columns: 1fr;
+        /* Une seule colonne pour les appareils mobiles */
+    }
+
+    .left-side,
+    .right-side {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contenue {
+        grid-column: 1 / -1;
+        /* Prend toute la largeur sur mobile */
+    }
+}
+
+.contentSofrout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.contenueSofrout {
+    grid-column: 1;
+}
+
+@media (max-width: 768px) {
+    .contentSofrout {
+        display: block;
+    }
+
+    .contenueSofrout {
+        grid-column: auto;
+    }
+
+    .slider-images img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* -------------------------------------- */
+
+.slider-container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-images {
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    animation: slide-animation 30s infinite alternate;
+}
+
+@keyframes slide-animation {
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    80% {
+        left: -400%;
+    }
+
+    100% {
+        left: -500%;
+    }
+
+}
+
+.slider-images img {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+@supports (-webkit-appearance: none) {
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f4f4f4;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: rgb(77, 107, 117);
+        background: -webkit-linear-gradient(315deg, rgba(77, 107, 117, 0.26) 26%, rgba(157, 109, 48, 0.23) 87%);
+        background: linear-gradient(315deg, rgba(77, 107, 117, 0.26) 26%, rgba(157, 109, 48, 0.23) 87%);
+    }
+
+    img {
+        border-radius: 4px;
+    }
+
+    .header {
+        background-image: url('./images/sofrout/fond-header.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        font-size: x-large;
+        height: 25vw;
+        /* Fix for Safari to support fixed backgrounds */
+        -webkit-background-clip: text;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    #bsd {
+        position: absolute;
+        color: #fff;
+        right: 10px;
+        top: 0;
+        font-size: 23px;
+    }
+
+    #menu {
+        position: fixed;
+        top: 83%;
+        width: 100%;
+        z-index: 9999;
+        /* Ensure it stays above content */
+    }
+
+    nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: larger;
+    }
+
+    main {
+        flex-grow: 1;
+        margin-top: 20px;
+        padding: 20px;
+        font-size: x-large;
+    }
+
+    /* Adaptation pour slider et animation */
+    .slider-container {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        /* Meilleur support sur Safari mobile */
+    }
+
+    .slider-images {
+        width: 500%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: slide-animation 30s infinite alternate;
+        -webkit-animation: slide-animation 30s infinite alternate;
+        /* Safari */
+    }
+
+    @keyframes slide-animation {
+        0% {
+            left: 0;
+        }
+
+        20% {
+            left: -100%;
+        }
+
+        40% {
+            left: -200%;
+        }
+
+        60% {
+            left: -300%;
+        }
+
+        80% {
+            left: -400%;
+        }
+
+        100% {
+            left: -500%;
+        }
+    }
+
+    .slider-images img {
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+
+    /* Correctifs pour Safari */
+    #title {
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        /* Fix for Safari */
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        .contentSofrout {
+            display: block;
+        }
+
+        .contenueSofrout {
+            grid-column: auto;
+        }
+
+        .slider-images img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}
+
+
+/* ------------   alertes    --------------- */
+/* Container des boutons */
+#alertesChaatnez .choiceAlertes {
+    display: flex;
+    justify-content: center;
+    /* Center buttons horizontally */
+    gap: 20px;
+    /* Space between buttons */
+    flex-wrap: wrap;
+    /* Allow buttons to wrap on smaller screens */
+}
+
+/* Button styling */
+#alertesChaatnez .choiceAlertes button {
+    padding: 12px 30px;
+    border-radius: 5px;
+    /* Rounded corners */
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alertesChaatnez .choiceAlertes button a {
+    color: inherit;
+    /* Inherit button text color */
+    text-decoration: none;
+    /* Remove underline from links */
+    font-weight: bold;
+    /* Bold text for links */
+}
+
+/* Specific styles for the "Alertes" button */
+#alertesChaatnez #btnLogin {
+    background-color: #d1c7b7;
+    /* Beige color matching your theme */
+    color: #333;
+    /* Dark text color */
+}
+
+#alertesChaatnez #btnLogin:hover {
+    background-color: #b7a38f;
+    /* Darker beige on hover */
+}
+
+/* Specific styles for the "Demander un accès" button */
+#alertesChaatnez #btnRequestAccess {
+    background-color: #4d6b75;
+    /* Blue-gray color matching your theme */
+    color: white;
+    /* White text color */
+}
+
+#alertesChaatnez #btnRequestAccess:hover {
+    background-color: #3e5755;
+    /* Darker blue-gray on hover */
+}
+
+/* .choiceAlertes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Style général des boutons */
+.choiceAlertes button {
+    padding: 12px 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choiceAlertes button a {
+    color: #333;
+    /* Gris foncé pour les liens */
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+/* Bouton "Alertes" */
+#btnLogin {
+    background-color: #d1c7b7;
+    /* Beige clair */
+    color: #333;
+    /* Gris foncé pour le texte */
+    border: 1px solid #ccc;
+}
+
+#btnLogin:hover {
+    background-color: #b7a38f;
+    /* Beige plus foncé au survol */
+}
+
+/* Bouton "Demander un accès" */
+#btnRequestAccess {
+    background-color: #4d6b75;
+    /* Gris-bleu doux */
+    color: white;
+    /* Texte blanc */
+    border: 1px solid #ccc;
+}
+
+#btnRequestAccess:hover {
+    background-color: #3e5755;
+    /* Gris-bleu plus foncé au survol */
+}
+
+*/
+
+/* Container for the connection form */
+.containerConnection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height to center vertically */
+    background-color: rgba(77, 107, 117, 0.1);
+    /* Light background matching your gradient */
+    padding: 20px;
+}
+
+/* Connection form container */
+#connection {
+    background-color: #fff;
+    /* White background for the form */
+    padding: 30px;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    max-width: 400px;
+    /* Limit width for better readability */
+    width: 100%;
+}
+
+/* Form styling */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Space between form elements */
+}
+
+/* Labels */
+#loginForm label {
+    font-size: 1.1em;
+    color: #333;
+    /* Dark text color */
+    font-weight: bold;
+}
+
+/* Input fields */
+#loginForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Light border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 1em;
+    outline: none;
+    /* Remove default outline */
+    transition: border-color 0.3s ease;
+    /* Smooth transition for focus */
+}
+
+#loginForm input:focus {
+    border-color: #4d6b75;
+    /* Highlight color matching your theme */
+}
+
+/* Submit button */
+#loginForm button {
+    padding: 12px 20px;
+    background-color: #4d6b75;
+    /* Matching your theme color */
+    color: white;
+    /* White text */
+    border: none;
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+#loginForm button:hover {
+    background-color: #3e5755;
+    /* Darker shade on hover */
+}
+
+@media (max-width: 768px) {
+    .containerConnection {
+        padding: 10px;
+        /* Reduce padding on smaller screens */
+    }
+
+    #connection {
+        padding: 20px;
+        /* Reduce padding on smaller screens */
+    }
+
+    #loginForm input,
+    #loginForm button {
+        font-size: 0.9em;
+        /* Slightly smaller font size on mobile */
+    }
+}
+
+
+#brands-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#brands-list li {
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+#brands-list li:hover {
+    background-color: #ddd;
+}
+
+.modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 20px;
+    padding: 20px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#modal-image {
+    max-width: 90%;
+    max-height: 500px;
+    object-fit: contain;
 }
