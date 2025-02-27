@@ -1,0 +1,391 @@
+{
+    "alertes": [
+        {
+            "brand": "BOSS-DZ",
+            "alerte_pdf": "./alertesChaatnez/BOSS-DZ/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/BOSS-DZ/image1.jpg",
+                "./alertesChaatnez/BOSS-DZ/image2.jpg",
+                "./alertesChaatnez/BOSS-DZ/image3.jpg"
+            ]
+        },
+        {
+            "brand": "pal-zileri",
+            "alerte_pdf": "./alertesChaatnez2/pal-zileri/alerte.pdf",
+            "images": [
+                "./alertesChaatnez2/pal-zileri/image1.jpg",
+                "./alertesChaatnez2/pal-zileri/image2.jpg",
+                "./alertesChaatnez2/pal-zileri/image3.jpg"
+            ]
+        },
+        {
+            "brand": "GIVENCHY-GD",
+            "alerte_pdf": "./alertesChaatnez/GIVENCHY-GD/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/GIVENCHY-GD/image1.jpeg",
+                "./alertesChaatnez/GIVENCHY-GD/image2.jpeg"
+            ]
+        },
+        {
+            "brand": "CANALI",
+            "alerte_pdf": "./alertesChaatnez/CANALI/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "NINO-DANIELI-DZ",
+            "alerte_pdf": "./alertesChaatnez/NINO-DANIELI-DZ/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/NINO-DANIELI-DZ/image1.jpg",
+                "./alertesChaatnez/NINO-DANIELI-DZ/image2.jpg",
+                "./alertesChaatnez/NINO-DANIELI-DZ/image3.jpg"
+            ]
+        },
+        {
+            "brand": "CC-collection3",
+            "alerte_pdf": "./alertesChaatnez/CC-collection3/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/CC-collection3/image1.jpg",
+                "./alertesChaatnez/CC-collection3/image2.jpg",
+                "./alertesChaatnez/CC-collection3/image3.jpg",
+                "./alertesChaatnez/CC-collection3/image4.jpg",
+                "./alertesChaatnez/CC-collection3/image5.jpg",
+                "./alertesChaatnez/CC-collection3/image6.jpg",
+                "./alertesChaatnez/CC-collection3/image7.jpg"
+            ]
+        },
+        {
+            "brand": "ECHARPE",
+            "alerte_pdf": "./alertesChaatnez/ECHARPE/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "BROOKS-BROTHERS",
+            "alerte_pdf": "./alertesChaatnez/BROOKS-BROTHERS/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "CORNELIANI2",
+            "alerte_pdf": "./alertesChaatnez/CORNELIANI2/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/CORNELIANI2/image1.jpeg",
+                "./alertesChaatnez/CORNELIANI2/image2.jpeg",
+                "./alertesChaatnez/CORNELIANI2/image3.jpeg"
+            ]
+        },
+        {
+            "brand": "SUITSUPPLY-GD",
+            "alerte_pdf": "./alertesChaatnez7/SUITSUPPLY-GD/alerte.pdf",
+            "images": [
+                "./alertesChaatnez7/SUITSUPPLY-GD/image1.jpg",
+                "./alertesChaatnez7/SUITSUPPLY-GD/image2.jpg",
+                "./alertesChaatnez7/SUITSUPPLY-GD/image3.jpg",
+                "./alertesChaatnez7/SUITSUPPLY-GD/image4.jpg"
+            ]
+        },
+        {
+            "brand": "DUNHILL",
+            "alerte_pdf": "./alertesChaatnez/DUNHILL/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "UGG-5782",
+            "alerte_pdf": "./alertesChaatnez3/UGG-5782/alerte.pdf",
+            "images": [
+                "./alertesChaatnez3/UGG-5782/image1.jpg"
+            ]
+        },
+        {
+            "brand": "DB-ZEGNA",
+            "alerte_pdf": "./alertesChaatnez3/DB-ZEGNA/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "ZEGNA1",
+            "alerte_pdf": "./alertesChaatnez3/ZEGNA1/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "roy-robson-DAVID-COHEN",
+            "alerte_pdf": "./alertesChaatnez2/roy-robson-DAVID-COHEN/alerte.pdf",
+            "images": [
+                "./alertesChaatnez2/roy-robson-DAVID-COHEN/image1.jpeg"
+            ]
+        },
+        {
+            "brand": "roy-robson-DAVID-COHEN2",
+            "alerte_pdf": "./alertesChaatnez/roy-robson-DAVID-COHEN/alerte2.pdf",
+            "images": []
+        },
+        {
+            "brand": "arthur-fox",
+            "alerte_pdf": "./alertesChaatnez/arthur-fox/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "JILSANDER",
+            "alerte_pdf": "./alertesChaatnez/JILSANDER/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/JILSANDER/image1.jpg"
+            ]
+        },
+        {
+            "brand": "THE-KOOPLES-DZ",
+            "alerte_pdf": "./alertesChaatnez5/THE-KOOPLES-DZ/alerte.pdf",
+            "images": [
+                "./alertesChaatnez5/THE-KOOPLES-DZ/image1.jpg",
+                "./alertesChaatnez5/THE-KOOPLES-DZ/image2.jpg",
+                "./alertesChaatnez5/THE-KOOPLES-DZ/image3.jpg"
+            ]
+        },
+        {
+            "brand": "CRAVATES",
+            "alerte_pdf": "./alertesChaatnez/CRAVATES/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "CERRUTI",
+            "alerte_pdf": "./alertesChaatnez/CERRUTI/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/CERRUTI/image1.jpg",
+                "./alertesChaatnez/CERRUTI/image2.jpg",
+                "./alertesChaatnez/CERRUTI/image3.jpg"
+            ]
+        },
+        {
+            "brand": "SCABAL",
+            "alerte_pdf": "./alertesChaatnez4/SCABAL/alerte.pdf",
+            "images": [
+                "./alertesChaatnez4/SCABAL/image1.jpg",
+                "./alertesChaatnez4/SCABAL/image2.jpg"
+            ]
+        },
+        {
+            "brand": "JP-HACKETT-CL",
+            "alerte_pdf": "./alertesChaatnez/JP-HACKETT-CL/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "DOLCE&GABBANA",
+            "alerte_pdf": "./alertesChaatnez/DOLCE&GABBANA/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "THE-KOOPLES",
+            "alerte_pdf": "./alertesChaatnez5/THE-KOOPLES/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "nouveau-point-de-controle",
+            "alerte_pdf": "./alertesChaatnez/nouveau-point-de-controle/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "dior-junior-CC",
+            "alerte_pdf": "./alertesChaatnez/dior-junior-CC/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/dior-junior-CC/image1.jpeg",
+                "./alertesChaatnez/dior-junior-CC/image2.jpeg",
+                "./alertesChaatnez/dior-junior-CC/image3.jpeg",
+                "./alertesChaatnez/dior-junior-CC/image4.jpeg"
+            ]
+        },
+        {
+            "brand": "TOM-FORD",
+            "alerte_pdf": "./alertesChaatnez3/TOM-FORD/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "bdika-destructrice-FILM-UGG",
+            "alerte_pdf": "./alertesChaatnez/bdika-destructrice-FILM-UGG/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/bdika-destructrice-FILM-UGG/image2.png"
+            ]
+        },
+        {
+            "brand": "GUCCI-DZ",
+            "alerte_pdf": "./alertesChaatnez/GUCCI-DZ/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/GUCCI-DZ/image1.jpg",
+                "./alertesChaatnez/GUCCI-DZ/image2.jpg",
+                "./alertesChaatnez/GUCCI-DZ/image3.jpg"
+            ]
+        },
+        {
+            "brand": "NINO-DANIELI",
+            "alerte_pdf": "./alertesChaatnez/NINO-DANIELI/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/NINO-DANIELI/image1.jpg",
+                "./alertesChaatnez/NINO-DANIELI/image2.jpg",
+                "./alertesChaatnez/NINO-DANIELI/image3.jpg"
+            ]
+        },
+        {
+            "brand": "AZZARO-DC",
+            "alerte_pdf": "./alertesChaatnez/AZZARO-DC/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/AZZARO-DC/image1.jpg",
+                "./alertesChaatnez/AZZARO-DC/image2.jpg"
+            ]
+        },
+        {
+            "brand": "PURIFICACION-GARCIA",
+            "alerte_pdf": "./alertesChaatnez2/PURIFICACION-GARCIA/alerte.pdf",
+            "images": [
+                "./alertesChaatnez2/PURIFICACION-GARCIA/image1.jpeg",
+                "./alertesChaatnez2/PURIFICACION-GARCIA/image2.jpeg",
+                "./alertesChaatnez2/PURIFICACION-GARCIA/image3.jpeg"
+            ]
+        },
+        {
+            "brand": "CC-COLLECTION-CORNELIANI",
+            "alerte_pdf": "./alertesChaatnez/CC-COLLECTION-CORNELIANI/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/CC-COLLECTION-CORNELIANI/image1.jpg",
+                "./alertesChaatnez/CC-COLLECTION-CORNELIANI/image2.jpg",
+                "./alertesChaatnez/CC-COLLECTION-CORNELIANI/image3.jpg",
+                "./alertesChaatnez/CC-COLLECTION-CORNELIANI/image4.jpg"
+            ]
+        },
+        {
+            "brand": "CORNELIANI-DZ",
+            "alerte_pdf": "./alertesChaatnez/CORNELIANI-DZ/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/CORNELIANI-DZ/image1.jpg",
+                "./alertesChaatnez/CORNELIANI-DZ/image2.jpg"
+            ]
+        },
+        {
+            "brand": "ZEGNA2",
+            "alerte_pdf": "./alertesChaatnez3/ZEGNA2/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "ZEGNA4",
+            "alerte_pdf": "./alertesChaatnez3/ZEGNA4/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "THE-KOOPLES2",
+            "alerte_pdf": "./alertesChaatnez3/THE-KOOPLES2/alerte.pdf",
+            "images": [
+                "./alertesChaatnez3/THE-KOOPLES2/image1.jpg",
+                "./alertesChaatnez3/THE-KOOPLES2/image2.jpg",
+                "./alertesChaatnez3/THE-KOOPLES2/image3.jpg"
+            ]
+        },
+        {
+            "brand": "ZEGNA3",
+            "alerte_pdf": "./alertesChaatnez3/ZEGNA3/alerte.pdf",
+            "images": [
+                "./alertesChaatnez3/ZEGNA3/image1.jpeg",
+                "./alertesChaatnez3/ZEGNA3/image2.jpeg",
+                "./alertesChaatnez3/ZEGNA3/image3.jpeg"
+            ]
+        },
+        {
+            "brand": "dior-MANTEAU-CACHEMIRE100%",
+            "alerte_pdf": "./alertesChaatnez/dior-MANTEAU-CACHEMIRE/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "SANDRO",
+            "alerte_pdf": "./alertesChaatnez2/SANDRO/alerte.pdf",
+            "images": [
+                "./alertesChaatnez2/SANDRO/image1.jpg",
+                "./alertesChaatnez2/SANDRO/image2.jpg",
+                "./alertesChaatnez2/SANDRO/image3.jpg"
+            ]
+        },
+        {
+            "brand": "LANVIN-DZ",
+            "alerte_pdf": "./alertesChaatnez/LANVIN-DZ/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/LANVIN-DZ/image1.jpg",
+                "./alertesChaatnez/LANVIN-DZ/image2.jpg",
+                "./alertesChaatnez/LANVIN-DZ/image3.jpg"
+            ]
+        },
+        {
+            "brand": "HERMES",
+            "alerte_pdf": "./alertesChaatnez/HERMES/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "ZEGNA",
+            "alerte_pdf": "./alertesChaatnez/ZEGNA/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "FACONNABLE",
+            "alerte_pdf": "./alertesChaatnez/FACONNABLE/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "defursac",
+            "alerte_pdf": "./alertesChaatnez/defursac/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "DIOR2",
+            "alerte_pdf": "./alertesChaatnez/DIOR2/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/DIOR2/image1.jpg",
+                "./alertesChaatnez/DIOR2/image2.jpg",
+                "./alertesChaatnez/DIOR2/image3.jpg",
+                "./alertesChaatnez/DIOR2/image4.jpg"
+            ]
+        },
+        {
+            "brand": "RALPH-LAUREN",
+            "alerte_pdf": "./alertesChaatnez2/RALPH-LAUREN/alerte.pdf",
+            "images": [
+                "./alertesChaatnez2/RALPH-LAUREN/image1.jpeg",
+                "./alertesChaatnez2/RALPH-LAUREN/image2.jpeg",
+                "./alertesChaatnez2/RALPH-LAUREN/image3.jpeg"
+            ]
+        },
+        {
+            "brand": "CORNELIANI",
+            "alerte_pdf": "./alertesChaatnez/CORNELIANI/alerte.pdf",
+            "images": [
+                "./alertesChaatnez/CORNELIANI/image1.jpg",
+                "./alertesChaatnez/CORNELIANI/image2.jpg"
+            ]
+        },
+        {
+            "brand": "ETIQUETTE-SANS-CHAATNEZ-7",
+            "alerte_pdf": "./alertesChaatnez/ETIQUETTE-SANS-CHAATNEZ-7/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "CARUSO",
+            "alerte_pdf": "./alertesChaatnez/CARUSO/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "SCABAL-DAHAN-G",
+            "alerte_pdf": "./alertesChaatnez4/SCABAL-DAHAN-G/alerte.pdf",
+            "images": [
+                "./alertesChaatnez4/SCABAL-DAHAN-G/image1.jpeg",
+                "./alertesChaatnez4/SCABAL-DAHAN-G/image2.jpeg",
+                "./alertesChaatnez4/SCABAL-DAHAN-G/image3.jpeg",
+                "./alertesChaatnez4/SCABAL-DAHAN-G/image4.jpeg"
+            ]
+        },
+        {
+            "brand": "CC-VILLEURBANNE",
+            "alerte_pdf": "./alertesChaatnez/CC-VILLEURBANNE/alerte.pdf",
+            "images": []
+        },
+        {
+            "brand": "CC-VILLEURBANNE2",
+            "alerte_pdf": "./alertesChaatnez/CC-VILLEURBANNE/alerte2.pdf",
+            "images": []
+        },
+        {
+            "brand": "GUCCI",
+            "alerte_pdf": "./alertesChaatnez/GUCCI/alerte.pdf",
+            "images": []
+        }
+    ]
+}

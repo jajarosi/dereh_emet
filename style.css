@@ -160,6 +160,7 @@ footer {
 }
 
 .image-scroll-container {
+    margin-top: 10px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -588,8 +589,70 @@ footer {
 
 }
 
+
+/* ------------   alertes    --------------- */
 /* Container des boutons */
-.choiceAlertes {
+#alertesChaatnez .choiceAlertes {
+    display: flex;
+    justify-content: center;
+    /* Center buttons horizontally */
+    gap: 20px;
+    /* Space between buttons */
+    flex-wrap: wrap;
+    /* Allow buttons to wrap on smaller screens */
+}
+
+/* Button styling */
+#alertesChaatnez .choiceAlertes button {
+    padding: 12px 30px;
+    border-radius: 5px;
+    /* Rounded corners */
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alertesChaatnez .choiceAlertes button a {
+    color: inherit;
+    /* Inherit button text color */
+    text-decoration: none;
+    /* Remove underline from links */
+    font-weight: bold;
+    /* Bold text for links */
+}
+
+/* Specific styles for the "Alertes" button */
+#alertesChaatnez #btnLogin {
+    background-color: #d1c7b7;
+    /* Beige color matching your theme */
+    color: #333;
+    /* Dark text color */
+}
+
+#alertesChaatnez #btnLogin:hover {
+    background-color: #b7a38f;
+    /* Darker beige on hover */
+}
+
+/* Specific styles for the "Demander un accès" button */
+#alertesChaatnez #btnRequestAccess {
+    background-color: #4d6b75;
+    /* Blue-gray color matching your theme */
+    color: white;
+    /* White text color */
+}
+
+#alertesChaatnez #btnRequestAccess:hover {
+    background-color: #3e5755;
+    /* Darker blue-gray on hover */
+}
+
+/* .choiceAlertes {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -644,4 +707,171 @@ footer {
 #btnRequestAccess:hover {
     background-color: #3e5755;
     /* Gris-bleu plus foncé au survol */
+}
+
+*/
+
+/* Container for the connection form */
+.containerConnection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height to center vertically */
+    background-color: rgba(77, 107, 117, 0.1);
+    /* Light background matching your gradient */
+    padding: 20px;
+}
+
+/* Connection form container */
+#connection {
+    background-color: #fff;
+    /* White background for the form */
+    padding: 30px;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    max-width: 400px;
+    /* Limit width for better readability */
+    width: 100%;
+}
+
+/* Form styling */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Space between form elements */
+}
+
+/* Labels */
+#loginForm label {
+    font-size: 1.1em;
+    color: #333;
+    /* Dark text color */
+    font-weight: bold;
+}
+
+/* Input fields */
+#loginForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Light border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 1em;
+    outline: none;
+    /* Remove default outline */
+    transition: border-color 0.3s ease;
+    /* Smooth transition for focus */
+}
+
+#loginForm input:focus {
+    border-color: #4d6b75;
+    /* Highlight color matching your theme */
+}
+
+/* Submit button */
+#loginForm button {
+    padding: 12px 20px;
+    background-color: #4d6b75;
+    /* Matching your theme color */
+    color: white;
+    /* White text */
+    border: none;
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+#loginForm button:hover {
+    background-color: #3e5755;
+    /* Darker shade on hover */
+}
+
+@media (max-width: 768px) {
+    .containerConnection {
+        padding: 10px;
+        /* Reduce padding on smaller screens */
+    }
+
+    #connection {
+        padding: 20px;
+        /* Reduce padding on smaller screens */
+    }
+
+    #loginForm input,
+    #loginForm button {
+        font-size: 0.9em;
+        /* Slightly smaller font size on mobile */
+    }
+}
+
+
+#brands-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#brands-list li {
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+#brands-list li:hover {
+    background-color: #ddd;
+}
+
+.modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 20px;
+    padding: 20px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#modal-image {
+    max-width: 90%;
+    max-height: 500px;
+    object-fit: contain;
 }

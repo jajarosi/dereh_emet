@@ -136,6 +136,82 @@ function togglePdf(elementId) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('alertesList').innerHTML =
-        `Hello`
+    fetch('alertes.json')
+        .then(response => response.json())
+        .then(data => {
+            const alertes = data.alertes;
+            const brandsList = document.getElementById('brands-list');
+
+            brandsList.innerHTML = '';
+
+            alertes.sort((a, b) => a.brand.localeCompare(b.brand));
+
+            // Afficher les marques
+            alertes.forEach(alerte => {
+                const listItem = document.createElement('li');
+                listItem.textContent = alerte.brand;
+                listItem.onclick = () => showModal(alerte);
+                brandsList.appendChild(listItem);
+            });
+        });
+
+    function showModal(alerte) {
+        const modal = document.getElementById('modal');
+        const modalBrandName = document.getElementById('modal-brand-name');
+        const pdfViewer = document.getElementById('pdf-viewer');
+        const modalImage = document.getElementById('modal-image');
+        const prevButton = document.getElementById('prev-image');
+        const nextButton = document.getElementById('next-image');
+
+        let currentIndex = -1; // -1 = PDF, 0+ = Images
+
+        function showMedia() {
+            if (currentIndex === -1) {
+                pdfViewer.src = alerte.alerte_pdf;
+                pdfViewer.style.display = "block";
+                modalImage.style.display = "none";
+            } else {
+                modalImage.src = alerte.images[currentIndex];
+                pdfViewer.style.display = "none";
+                modalImage.style.display = "block";
+            }
+
+            // Gérer l'affichage des boutons
+            prevButton.style.display = currentIndex > -1 ? "block" : "none";
+            nextButton.style.display = currentIndex < alerte.images.length - 1 ? "block" : "none";
+        }
+
+        // Affichage initial (PDF)
+        modalBrandName.textContent = alerte.brand;
+        showMedia();
+
+        // Navigation
+        prevButton.onclick = () => {
+            if (currentIndex > -1) {
+                currentIndex--;
+                showMedia();
+            }
+        };
+
+        nextButton.onclick = () => {
+            if (currentIndex < alerte.images.length - 1) {
+                currentIndex++;
+                showMedia();
+            }
+        };
+
+        // Ouvrir le modal
+        modal.style.display = "block";
+
+        // Fermer le modal
+        document.querySelector(".close").onclick = () => {
+            modal.style.display = "none";
+        };
+
+        window.onclick = (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    }
 });

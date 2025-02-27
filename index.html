@@ -120,7 +120,7 @@
             </div> -->
             <div id="text-home">
                 <div class="homeText" style="padding-top: 20px;">
-                    <h2>Dereh Emet ?</h2>
+                    <h2>Dereh Emet </h2>
                     <p>L’association Déré’h Emet existe maintenant depuis 22 ans avec l’aide du créateur, à Paris dans
                         le 3 ème arrondissement (la Yéchiva qui a accueilli des jeunes et moins jeunes pendant plus de
                         10
@@ -149,7 +149,8 @@
                         <li>Mézouzot 20 cm à 200 euros pièce</li>
                     </ul>
                     <p> MERCI DE VOTRE GENEROSITE </p>
-                    <h2>Rav Chalom Lévy – directeur</h2>
+                    <h2>Rav Chalom Lévy</h2>
+                    <h6>directeur</h6>
 
                 </div>
 
@@ -422,7 +423,22 @@
         </section>
         <section id="contenusAlertes" class="content">
             <div class="containerAlertes">
-                <div id="alertesList">
+                <h1>Liste des Alertes</h1>
+                <ul id="brands-list"></ul> <!-- Liste des marques -->
+
+                <!-- Modal -->
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 id="modal-brand-name"></h2>
+
+                        <div id="image-container">
+                            <iframe id="pdf-viewer" src="" max-width="80%" max-height="500px" frameborder="0"></iframe>
+                            <button id="prev-image">❮</button>
+                            <img id="modal-image" src="" alt="Image" />
+                            <button id="next-image">❯</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
