@@ -76,9 +76,6 @@
             "brand": "SUITSUPPLY-GD",
             "alerte_pdf": "./alertesChaatnez12/SUITSUPPLY-GD/alerte.pdf",
             "images": [
-                "./alertesChaatnez12/SUITSUPPLY-GD/image1.jpg",
-                "./alertesChaatnez12/SUITSUPPLY-GD/image2.jpg",
-                "./alertesChaatnez12/SUITSUPPLY-GD/image3.jpg",
                 "./alertesChaatnez12/SUITSUPPLY-GD/image4.jpg"
             ]
         },
