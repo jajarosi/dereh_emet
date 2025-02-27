@@ -74,21 +74,12 @@
         },
         {
             "brand": "SUITSUPPLY-GD",
-<<<<<<< HEAD
             "alerte_pdf": "./alertesChaatnez12/SUITSUPPLY-GD/alerte.pdf",
             "images": [
                 "./alertesChaatnez12/SUITSUPPLY-GD/image1.jpg",
                 "./alertesChaatnez12/SUITSUPPLY-GD/image2.jpg",
                 "./alertesChaatnez12/SUITSUPPLY-GD/image3.jpg",
                 "./alertesChaatnez12/SUITSUPPLY-GD/image4.jpg"
-=======
-            "alerte_pdf": "./alertesChaatnez7/SUITSUPPLY-GD/alerte.pdf",
-            "images": [
-                "./alertesChaatnez7/SUITSUPPLY-GD/image1.jpg",
-                "./alertesChaatnez7/SUITSUPPLY-GD/image2.jpg",
-                "./alertesChaatnez7/SUITSUPPLY-GD/image3.jpg",
-                "./alertesChaatnez7/SUITSUPPLY-GD/image4.jpg"
->>>>>>> 5ca3d5fd3395a28499d3f790d75a4a36fbc7815a
             ]
         },
         {
