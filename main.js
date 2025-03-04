@@ -157,53 +157,78 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showModal(alerte) {
         const modal = document.getElementById('modal');
-        const modalBrandName = document.getElementById('modal-brand-name');
-        const pdfViewer = document.getElementById('pdf-viewer');
+        const pdfCanvas = document.getElementById('pdf-canvas');
         const modalImage = document.getElementById('modal-image');
         const prevButton = document.getElementById('prev-image');
         const nextButton = document.getElementById('next-image');
 
-        let currentIndex = -1; // -1 = PDF, 0+ = Images
+        let hasPdf = Boolean(alerte.alerte_pdf);
+        let hasImages = Array.isArray(alerte.images) && alerte.images.length > 0;
+        let currentIndex = hasPdf ? -1 : 0; // Si PDF présent, commencer par -1 sinon 0
+        let pdfDoc = null;
+        let currentPage = 1;
 
         function showMedia() {
-            if (currentIndex === -1) {
-                pdfViewer.src = alerte.alerte_pdf;
-                pdfViewer.style.display = "block";
+            if (currentIndex === -1 && hasPdf) {
+                // Afficher le PDF
+                loadPdf(alerte.alerte_pdf);
                 modalImage.style.display = "none";
-            } else {
+                pdfCanvas.style.display = "block";
+            } else if (hasImages) {
+                // Afficher une image
                 modalImage.src = alerte.images[currentIndex];
-                pdfViewer.style.display = "none";
+                pdfCanvas.style.display = "none";
                 modalImage.style.display = "block";
             }
 
             // Gérer l'affichage des boutons
-            prevButton.style.display = currentIndex > -1 ? "block" : "none";
-            nextButton.style.display = currentIndex < alerte.images.length - 1 ? "block" : "none";
+            prevButton.style.display = (currentIndex > -1 || (currentIndex === 0 && hasPdf)) ? "block" : "none";
+            nextButton.style.display = (currentIndex < alerte.images.length - 1) ? "block" : "none";
         }
 
-        // Affichage initial (PDF)
-        modalBrandName.textContent = alerte.brand;
-        showMedia();
+        function loadPdf(pdfUrl) {
+            pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+                pdfDoc = pdf;
+                renderPage(currentPage);
+            }).catch(err => {
+                console.error("Erreur de chargement du PDF : ", err);
+            });
+        }
 
-        // Navigation
+        function renderPage(pageNum) {
+            pdfDoc.getPage(pageNum).then(page => {
+                const viewport = page.getViewport({ scale: 1.5 });
+                const context = pdfCanvas.getContext('2d');
+                pdfCanvas.height = viewport.height;
+                pdfCanvas.width = viewport.width;
+
+                page.render({
+                    canvasContext: context,
+                    viewport: viewport
+                });
+            });
+        }
+
         prevButton.onclick = () => {
-            if (currentIndex > -1) {
-                currentIndex--;
-                showMedia();
+            if (currentIndex > 0) {
+                currentIndex--; // Reculer dans les images
+            } else if (currentIndex === 0 && hasPdf) {
+                currentIndex = -1; // Revenir au PDF
             }
+            showMedia();
         };
 
         nextButton.onclick = () => {
             if (currentIndex < alerte.images.length - 1) {
-                currentIndex++;
-                showMedia();
+                currentIndex++; // Avancer dans les images
             }
+            showMedia();
         };
 
-        // Ouvrir le modal
+        showMedia();
+
         modal.style.display = "block";
 
-        // Fermer le modal
         document.querySelector(".close").onclick = () => {
             modal.style.display = "none";
         };

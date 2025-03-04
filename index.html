@@ -9,6 +9,7 @@
     <script src="./main.js" defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js" defer></script>
     <title>Dereh Emet</title>
 </head>
 
@@ -424,20 +425,19 @@
         <section id="contenusAlertes" class="content">
             <div class="containerAlertes">
                 <h1>Liste des Alertes</h1>
-                <ul id="brands-list"></ul> <!-- Liste des marques -->
+                <ul id="brands-list"></ul>
 
-                <!-- Modal -->
-                <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 id="modal-brand-name"></h2>
+            </div>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modal-brand-name"></h2>
 
-                        <div id="image-container">
-                            <iframe id="pdf-viewer" src="" max-width="80%" max-height="500px" frameborder="0"></iframe>
-                            <button id="prev-image">❮</button>
-                            <img id="modal-image" src="" alt="Image" />
-                            <button id="next-image">❯</button>
-                        </div>
+                    <div id="image-container">
+                        <canvas id="pdf-canvas"></canvas>
+                        <button id="prev-image">❮</button>
+                        <img id="modal-image" src="" alt="Image" />
+                        <button id="next-image">❯</button>
                     </div>
                 </div>
             </div>
