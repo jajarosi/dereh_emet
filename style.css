@@ -924,3 +924,18 @@ footer {
 #next-image {
     right: 10px;
 }
+
+#story-section {
+    max-width: 600px;
+    margin: auto;
+  }
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+  .story {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 5px solid #ccc;
+  }

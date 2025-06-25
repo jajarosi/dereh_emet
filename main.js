@@ -240,3 +240,78 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 });
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwKjn-fDHCdf6-FKvJtEgPLHFb6Dhj9R1aGt5LkLAkrxIN7gDK5wjJCneKoR5M6AyU/exec';
+
+document.addEventListener('DOMContentLoaded', function () {
+  const addBtn = document.getElementById("addStoryBtn");
+  const storyForm = document.getElementById("storyForm");
+  const storyInput = document.getElementById("storyInput");
+  const submitBtn = document.getElementById("submitStoryBtn");
+  const container = document.getElementById("storiesContainer");
+
+  // Affiche le formulaire lorsqu'on clique sur "+"
+  addBtn.addEventListener("click", () => {
+    storyForm.style.display = "block";
+    storyInput.focus();
+  });
+
+  // Soumettre une nouvelle histoire
+  submitBtn.addEventListener("click", async () => {
+    const story = storyInput.value.trim();
+    if (!story) return alert("Merci d'écrire quelque chose.");
+
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify({ story })
+      });
+
+      // Réinitialiser le formulaire
+      storyForm.style.display = "none";
+      storyInput.value = "";
+
+      // Recharger les histoires
+      loadStories();
+    } catch (error) {
+      console.error("Erreur lors de l'envoi de l'histoire :", error);
+      alert("Une erreur est survenue. Réessaie plus tard.");
+    }
+  });
+
+  // Charger toutes les histoires existantes
+  async function loadStories() {
+    container.innerHTML = ""; // Vide le conteneur
+    try {
+      const response = await fetch(scriptURL);
+      const stories = await response.json();
+
+      if (stories.length === 0) {
+        const msg = document.createElement("p");
+        msg.className = "no-stories";
+        msg.textContent = "Aucune histoire pour l’instant. Soyez le premier à partager la vôtre !";
+        msg.style.textAlign = "center";
+        msg.style.fontStyle = "italic";
+        container.appendChild(msg);
+      } else {
+        stories.forEach(s => {
+          const div = document.createElement("div");
+          div.className = "story";
+          div.textContent = s.story;
+          container.appendChild(div);
+        });
+      }
+    } catch (err) {
+      console.error("Erreur lors du chargement :", err);
+      const errMsg = document.createElement("p");
+      errMsg.textContent = "Erreur de chargement. Vérifie ta connexion.";
+      errMsg.style.color = "red";
+      errMsg.style.textAlign = "center";
+      container.appendChild(errMsg);
+    }
+  }
+
+  // Charger les histoires à l'ouverture
+  loadStories();
+});
