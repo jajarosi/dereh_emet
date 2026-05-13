@@ -9,7 +9,7 @@ $(document).ready(function () {
     $("section:not(#home)").hide();
 
     // Gestionnaire d'événements pour les liens internes
-    $("a").on("click", function () {
+    $("a[data-section]").on("click", function () {
         const dataSection = $(this).attr("data-section")
         // console.log(dataSection)
         $("section").hide()
@@ -24,9 +24,21 @@ $(document).ready(function () {
         $('.dropdown-menu').hide();
     });
     $('.dropdown').hover(function () {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        if (window.innerWidth > 992) { // On n'active le hover que sur PC
+            $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
+        }
     }, function () {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        if (window.innerWidth > 992) {
+            $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
+        }
+    });
+    $('.dropdown-toggle').on('click', function (e) {
+        if (window.innerWidth <= 992) {
+            e.preventDefault();
+            $(this).next('.dropdown-menu').stop(true, true).fadeToggle(300);
+        } else {
+            e.preventDefault();
+        }
     });
 
     $("#loginForm").on("submit", function (event) {
