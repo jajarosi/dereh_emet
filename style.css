@@ -25,7 +25,7 @@ img {
 .header {
   position: relative;
   min-height: 280px;
-  background-image: linear-gradient(rgba(10, 14, 26, 0.8), rgba(10, 14, 26, 0.8)), url('./images/sofrout/fond-header.png');
+  background-image: linear-gradient(rgba(10, 14, 26, 0.8), rgba(10, 14, 26, 0.8)), url('./images/sofrout/fond-header.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -280,6 +280,57 @@ main section ol li {
 #kollel,
 .contentSofrout {
   max-width: 100%;
+}
+
+#videoList {
+    display: grid; /* Utiliser Grid est plus simple pour forcer 3 colonnes */
+    grid-template-columns: repeat(3, 1fr); /* Force exactement 3 colonnes égales */
+    gap: 15px; /* Espace entre les vidéos */
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.video-card {
+    width: 100%;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Garde le format rectangulaire YouTube */
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.video-info {
+    padding: 10px;
+    color: white;
+    font-size: 0.85rem;
+    min-height: 50px; /* Aligne les titres même s'ils font 1 ou 2 lignes */
+}
+
+/* --- ADAPTATION MOBILE ET TABLETTE --- */
+
+/* 2 par ligne sur tablette */
+@media (max-width: 1024px) {
+    #videoList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 1 par ligne sur mobile (pour que ce soit lisible) */
+@media (max-width: 600px) {
+    #videoList {
+        grid-template-columns: 1fr;
+    }
 }
 
 .livreSection {

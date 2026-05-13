@@ -116,22 +116,43 @@ const videoList = [
         title: "CHAATNEZ 12 - LE BILAN - Rav Chalom Levy et Fabrice Mamou"
     },
 ]
+
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('videoList').innerHTML = videoList.map((item) => {
-        return (
-            `
-                <div class="video-list">
-                <iframe width="100%" height="100%" src=${item.source}
-                        title="YouTube video player" frameborder="0"
+    const container = document.getElementById('videoList');
+    
+    container.innerHTML = videoList.map((item) => {
+        return `
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe 
+                        data-src="${item.source}" 
+                        src="about:blank" 
+                        title="${item.title}" 
+                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-                        allowfullscreen class="main-video"></iframe>
+                        allowfullscreen 
+                        class="lazy-video">
+                    </iframe>
                 </div>
-                <div class="list-title">   
-                <p>${item.title}</p>
+                <div class="video-info">   
+                    <p>${item.title}</p>
                 </div>
-            `
-        )
-    }).join('')
+            </div>
+        `;
+    }).join('');
+
+    // Intersection Observer pour charger au scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const iframe = entry.target;
+                iframe.src = iframe.dataset.src;
+                observer.unobserve(iframe);
+            }
+        });
+    }, { rootMargin: "100px" });
+
+    document.querySelectorAll('.lazy-video').forEach(vid => observer.observe(vid));
 });
 
 function togglePdf(elementId) {
