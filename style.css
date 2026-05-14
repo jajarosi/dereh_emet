@@ -1295,7 +1295,7 @@ footer a {
   width: 100%;
   text-align: center;
   /* Centre tout le texte */
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* Donne de l'air avant les cartes */
   display: flex;
   flex-direction: column;
