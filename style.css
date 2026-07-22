@@ -1849,40 +1849,216 @@ footer a {
     border: 1px solid #d4af37;
 }
 
+/* --- MINI-FILMS D'ÉCRITURE --- */
+/* Cette section n'a pas de slider : on annule la grille 2 colonnes
+   de .contentSofrout pour que tout soit centré sur la largeur */
+#miniFilmsSofrout {
+    display: block;
+}
+
+#miniFilmsSofrout .titleSection {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#miniFilmsSofrout .contenueSofrout {
+    align-items: center;
+}
+
+.mini-films-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-top: 3px solid #d4af37;
+}
+
+/* Frise de lettres hébraïques : l'hébreu se lit de droite à gauche,
+   donc le alef doit apparaître à droite */
+.mini-films-letters {
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 35px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed rgba(212, 175, 55, 0.25);
+}
+
+.mini-films-letters span {
+    font-size: 1.6rem;
+    color: #d4af37;
+    opacity: 0.45;
+    transition: 0.3s;
+}
+
+.mini-films-card:hover .mini-films-letters span {
+    opacity: 0.85;
+}
+
+.mini-films-intro {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+
+.mini-films-intro strong {
+    color: #d4af37;
+    font-weight: 700;
+}
+
+.mini-films-note {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ffffff;
+    opacity: 0.7;
+    max-width: 480px;
+    margin: 0 auto 40px;
+}
+
+.mini-films-request {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.mini-films-label {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: #d4af37;
+    opacity: 0.8;
+}
+
+.mini-films-mail {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+    opacity: 0.6;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .mini-films-card {
+        padding: 35px 20px;
+    }
+
+    .mini-films-letters {
+        gap: 12px;
+    }
+
+    .mini-films-intro {
+        font-size: 1.1rem;
+    }
+
+    .mini-films-request .btn-gold-contact {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 0.85rem;
+        white-space: normal;
+    }
+}
+
 /* Bloc principal de don */
 .main-donation-box {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto 60px;
     background: rgba(212, 175, 55, 0.05);
     border: 1px solid rgba(212, 175, 55, 0.2);
-    padding: 50px;
+    padding: 50px 40px;
     text-align: center;
 }
 
 .donation-cards-container {
-    display: flex;
-    justify-content: space-between; /* Espace équitablement la gauche et la droite */
-    gap: 30px; /* Espace entre les deux blocs */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
     margin-bottom: 40px; /* Espace avec le bloc du bas */
 }
 
 .donation-card-top {
-    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px 20px;
+    gap: 15px;
+    padding: 35px 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.donation-card-top:hover {
+    border-color: rgba(212, 175, 55, 0.45);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .donation-card-top h3 {
-    font-size: 1.8rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
     color: #d4af37;
-    margin-bottom: 30px;
-    white-space: nowrap;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    hyphens: auto;
 }
 
 .donation-card-top p {
-    margin-bottom: 20px; 
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Lien texte "nous contacter" : doit se voir comme cliquable (le style global
+   des <a> est sans soulignement, donc il passait pour du texte normal) */
+.donation-card-top a:not(.btn-gold-contact),
+.israel-tax-info a {
+    display: inline-block;
+    color: #d4af37;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(212, 175, 55, 0.4);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.donation-card-top a:not(.btn-gold-contact)::after {
+    content: " →";
+    display: inline-block;
+    transition: transform 0.25s;
+}
+
+.donation-card-top a:not(.btn-gold-contact):hover,
+.israel-tax-info a:hover {
+    color: #f0d47a;
+    text-decoration-color: #f0d47a;
+}
+
+.donation-card-top a:not(.btn-gold-contact):hover::after {
+    transform: translateX(4px);
+}
+
+.donation-card-top a:not(.btn-gold-contact):focus-visible,
+.israel-tax-info a:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 3px;
+}
+
+/* Le bouton doit rester dans la carte, quelle que soit la longueur du texte */
+.donation-card-top .btn-gold-contact {
+    margin-top: auto;
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .israel-tax-info {
@@ -1893,9 +2069,23 @@ footer a {
     opacity: 0.8;
 }
 
+.israel-tax-info p {
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
 @media (max-width: 768px) {
+    .main-donation-box {
+        padding: 35px 20px;
+    }
+
     .donation-cards-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .donation-card-top {
+        padding: 30px 20px;
     }
 }
 
