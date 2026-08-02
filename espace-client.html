@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Espace client — Dereh Emet</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div id="title">
+        <div class="titreHaut">
+          <p>DEREH EMET</p>
+          <h2 style="color: white">RAV CHALOM LEVY</h2>
+        </div>
+        <span id="bsd">בס״ד</span>
+      </div>
+    </header>
+
+    <main class="espace-client">
+      <a href="index.html" class="ec-back">Retour au site</a>
+
+      <div class="titleSection">
+        <h2 class="gold-title-retouche">MINI-FILMS D’ÉCRITURE</h2>
+        <div class="luxury-line"></div>
+        <p class="subtitle-retouche">ESPACE RÉSERVÉ</p>
+      </div>
+
+      <!-- Écran 1 : connexion -->
+      <section id="ec-login" class="ec-card">
+        <div class="mini-films-letters" aria-hidden="true">
+          <span>א</span>
+          <span>ב</span>
+          <span>ג</span>
+          <span>ד</span>
+          <span>ה</span>
+          <span>ו</span>
+          <span>ז</span>
+        </div>
+
+        <p class="mini-films-intro">
+          Accès aux <strong>mini-films d’écriture</strong>
+        </p>
+        <p class="mini-films-note">
+          Cet espace est réservé. Utilisez les identifiants qui vous ont été
+          transmis par Dereh Emet.
+        </p>
+
+        <form id="ec-form" class="ec-form" autocomplete="on">
+          <label class="ec-label" for="ec-email">Email</label>
+          <input
+            type="email"
+            id="ec-email"
+            name="email"
+            class="ec-input"
+            autocomplete="username"
+            required
+          />
+
+          <label class="ec-label" for="ec-password">Mot de passe</label>
+          <div class="ec-password-wrap">
+            <input
+              type="password"
+              id="ec-password"
+              name="password"
+              class="ec-input"
+              autocomplete="current-password"
+              required
+            />
+            <button
+              type="button"
+              id="ec-toggle-password"
+              class="ec-toggle-password"
+              aria-controls="ec-password"
+              aria-pressed="false"
+            >
+              Afficher
+            </button>
+          </div>
+
+          <button type="submit" id="ec-submit" class="btn-gold-contact">
+            SE CONNECTER
+          </button>
+        </form>
+
+        <p id="ec-error" class="ec-error" role="alert" hidden></p>
+      </section>
+
+      <!-- Écran 2 : galerie -->
+      <section id="ec-gallery" hidden>
+        <div class="ec-bar">
+          <p class="ec-bar-user">
+            Connecté&nbsp;: <span id="ec-user"></span>
+          </p>
+          <button type="button" id="ec-logout" class="ec-logout">
+            Se déconnecter
+          </button>
+        </div>
+
+        <p id="ec-status" class="mini-films-note">Chargement des vidéos…</p>
+
+        <div id="ec-videos" class="ec-videos"></div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+    <script src="./espace-client.js" defer></script>
+  </body>
+</html>

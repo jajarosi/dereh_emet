@@ -1942,6 +1942,23 @@ footer a {
     overflow-wrap: break-word;
 }
 
+/* Entrée discrète vers l'espace client : trouvable par qui la cherche,
+   sans concurrencer le bouton principal "Demander par mail" */
+.mini-films-access {
+    margin-top: 12px;
+    padding-top: 18px;
+    border-top: 1px dashed rgba(212, 175, 55, 0.25);
+    width: 100%;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    opacity: 0.75;
+    transition: 0.3s;
+}
+
+.mini-films-access:hover {
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     .mini-films-card {
         padding: 35px 20px;
@@ -2494,4 +2511,236 @@ footer a {
 .close-lightbox-btn:hover {
   opacity: 1;
   color: #d4af37;
+}
+
+/* ---------------------------------------------------------------
+   Espace client (espace-client.html)
+   --------------------------------------------------------------- */
+.espace-client {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px 80px;
+}
+
+/* Retour vers le site principal, présent sur les deux écrans */
+.ec-back {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  opacity: 0.75;
+  transition: 0.3s;
+}
+
+.ec-back::before {
+  content: "← ";
+}
+
+.ec-back:hover {
+  opacity: 1;
+}
+
+.ec-card {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-top: 3px solid #d4af37;
+}
+
+.ec-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.ec-label {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #d4af37;
+  opacity: 0.8;
+}
+
+.ec-input {
+  /* box-sizing n'est pas héritable : sans ça, padding et bordure
+     s'ajoutent à la largeur et le champ déborde de la carte */
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.ec-input:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+/* Champ mot de passe + bouton afficher/masquer par-dessus */
+.ec-password-wrap {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.ec-password-wrap .ec-input {
+  margin-bottom: 0;
+  /* réserve la place du bouton Afficher/Masquer pour que les points
+     du mot de passe ne passent jamais dessous */
+  padding-right: 100px;
+}
+
+.ec-toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  color: #d4af37;
+  font-family: inherit;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ec-toggle-password:hover {
+  opacity: 1;
+}
+
+.ec-toggle-password:focus-visible {
+  outline: 1px solid #d4af37;
+  outline-offset: 2px;
+  opacity: 1;
+}
+
+.ec-form .btn-gold-contact {
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.ec-form .btn-gold-contact:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.ec-error {
+  margin: 20px 0 0;
+  font-size: 0.9rem;
+  color: #e2726e;
+}
+
+/* Barre de session */
+.ec-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  margin-bottom: 30px;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.25);
+}
+
+.ec-bar-user {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0.7;
+  overflow-wrap: anywhere;
+}
+
+.ec-bar-user span {
+  color: #d4af37;
+}
+
+.ec-logout {
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 2px;
+  color: #d4af37;
+  font-family: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ec-logout:hover {
+  border-color: #d4af37;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+/* Grille de vidéos.
+   direction: rtl place le alef en haut à droite et fait progresser la
+   grille de droite à gauche, comme se lit l'alphabet hébraïque.
+   Le contenu de chaque carte est remis en ltr juste en dessous. */
+.ec-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  direction: rtl;
+}
+
+.ec-video-card {
+  direction: ltr;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ec-video-card video {
+  width: 100%;
+  display: block;
+  background: #000000;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.ec-video-title {
+  margin: 0;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* La lettre seule, sans libellé : elle porte toute la vignette */
+.ec-video-letter {
+  padding: 16px;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #d4af37;
+  unicode-bidi: isolate;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .espace-client {
+    padding: 30px 15px 60px;
+  }
+
+  .ec-card {
+    padding: 35px 20px;
+  }
+
+  .ec-videos {
+    grid-template-columns: 1fr;
+  }
 }
